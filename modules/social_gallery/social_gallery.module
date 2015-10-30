@@ -1,0 +1,107 @@
+<?php
+/**
+ * @file
+ * social_gallery.module
+ */
+
+include_once 'social_gallery.features.inc';
+
+/**
+ * Implements hook_commons_bw_group_widget().
+ */
+function social_gallery_commons_bw_group_widget() {
+  return array(
+    'social_gallery' => array(
+      'title' => 'Gallery',
+      'type' => 'view',
+      'vid' => 'gallery',
+      'display' => 'default',
+      'bundle' => 'gallery',
+    ),
+  );
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function social_gallery_views_pre_render(&$view) {
+  if ($view->name == 'gallery') {
+    $view->attachment_before = l(t('Create a gallery'), 'node/add/gallery');
+  }
+}
+
+/**
+ * After-build call-back.
+ *
+ * See commons_q_a_form_commons_bw_partial_node_form_alter().
+ */
+function social_gallery_form_commons_bw_partial_node_form_after_build($form) {
+  $language = $form['body']['#language'];
+  $form['body'][$language][0]['#pre_render'] = array();
+  $form['body'][$language][0]['format']['#access'] = FALSE;
+  $form['body'][$language][0]['value']['#rows'] = 3;
+
+  return $form;
+}
+
+/**
+ * Implements hook_commons_entity_integration.
+ */
+function social_gallery_commons_entity_integration() {
+  return array(
+    'node' => array(
+      'gallery' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_strongarm_alter().
+ */
+function social_gallery_strongarm_alter(&$items) {
+  // Expose the Gallery content type for 'liking' via the Commons_like module
+  // by altering the configuration for the Rate.module widget that it provides.
+  if (!empty($items['rate_widgets']->value)) {
+    foreach ($items['rate_widgets']->value as $key => $widget) {
+      if ($widget->name == 'commons_like') {
+        if (!in_array('gallery', $items['rate_widgets']->value[$key]->node_types)) {
+          $items['rate_widgets']->value[$key]->node_types[] = 'gallery';
+        }
+        if (!in_array('gallery', $items['rate_widgets']->value[$key]->comment_types)) {
+          $items['rate_widgets']->value[$key]->comment_types[] = 'gallery';
+        }
+      }
+    }
+  }
+  // Expose the post content type for integration with Commons Radioactivity
+  // and Commons Groups.
+  foreach (array('commons_radioactivity_entity_types', 'commons_groups_entity_types') as $key) {
+    if (isset($items[$key])) {
+      $items[$key]->value['node']['gallery'] = 1;
+    }
+  }
+}
+
+/**
+ * Implements hook_views_default_views_alter().
+ *
+ * Display galleries on the browsing widget main view.
+ */
+function social_gallery_views_default_views_alter(&$views) {
+  if (!empty($views['commons_bw_all'])) {
+    $views['commons_bw_all']->display['default']->display_options['filters']['type']['value']['gallery'] = 'gallery';
+  }
+}
+
+/**
+ * Implements hook_entity_view().
+ *
+ * Limit gallery images in teaser view mode.
+ */
+function social_gallery_entity_view($entity, $type, $view_mode, $langcode) {
+  if ($view_mode == 'teaser') {
+    if (isset($entity->content['field_gallery_image'])) {
+      $entity->content['field_gallery_image']['#items'] = array_slice($entity->content['field_gallery_image']['#items'], 0, 4);
+    }
+  }
+}

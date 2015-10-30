@@ -1,0 +1,5 @@
+name = Social Blocks
+description = Custom configurable blocks outside panels
+core = 7.x
+package = Social Platforms - Custom modules
+project = social_blocks

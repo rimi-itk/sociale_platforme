@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP User Profile Pages feature.
+ */
+
+include_once 'sp_user_profile_pages.features.inc';

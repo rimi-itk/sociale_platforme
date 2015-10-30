@@ -1,0 +1,84 @@
+/*
+========================================================================== 
+	Comments
+========================================================================== 
+*/
+
+#comments,
+.page-comment {
+	.com-left {
+		float: left;
+		width: 18%;
+		margin-right: 2%;
+	}
+	.com-right {
+		float: left;
+		width: 80%;
+	}
+	h2.title {
+		font-size: 1.5em;
+		font-weight: normal;
+		padding: 1em 0 1em;
+		margin: 0;
+	}
+	h2.comment-form {
+		border-top: 1px solid $color-gray-lightest;
+		margin: 30px 0 0 0;
+	}
+	h2.title:before {
+		@include icon-prepare();
+		content: "\e602";
+		margin: 0 5px 0 0;
+		font-size: 1.25em;
+		position: relative;
+		top: 5px;
+	}
+	h2:first-child {
+		border-top: 0;
+		margin: 0;
+	}
+	article.comment {
+		padding: 20px;
+		margin: 0 0 5px 0;
+		position: relative;
+		@include box-std();
+		h3.comment-title {
+			font-size: $font-size-large;
+			margin: 0 0 3px 0;
+			a {
+				text-decoration: none;
+			}
+		}
+		.comment-submitted {
+			margin: 0 0 15px 0;
+			color: $color-gray-light;
+		}
+		.field-name-comment-body {
+			line-height: $line-height-std;
+			p {
+				margin-bottom: 1em;
+			}
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.rate-widget {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+		.comment-links {
+			margin-top: 10px;
+			text-align: right;
+			li {
+				padding: 0 0 0 1em;
+				margin: 0;
+			}
+			a {
+				text-decoration: none;
+				text-transform: lowercase;
+				color: $text-color-std;
+			}
+		}
+	}
+}

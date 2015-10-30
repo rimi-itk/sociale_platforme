@@ -1,0 +1,319 @@
+/*
+========================================================================== 
+	General Form
+========================================================================== 
+*/
+
+form {
+	input[type=text],
+	input[type=password],
+	input[type=email],
+	textarea {
+		color: black;
+		background: white;
+		border: 1px solid #ececec;
+		font-family: $font-fam-std;
+		font-size: $font-size-std;
+		padding: 0.75em 1em;
+		margin: 0;
+		max-width: 100%;
+		@include box-shadow(rgba(black, 0.15) 0 1px 0 0 inset);	
+		@include border-radius(5px);
+		@include box-sizing(border-box);
+	}
+	input[type=submit],
+	input[type=button] {
+		@include button();
+	}
+	#edit-cancel {
+		margin: 0 0 0 15px;
+	}
+}
+
+/* Simulate a chosen select form value as inline text. */
+.hidden-select-wrapper {
+  position: relative;
+  display: inline-block;
+	@include transition-duration(0.25s);
+	@include transition-property(width);
+}
+.select-status {
+  display: inline-block;
+  white-space: nowrap;
+}
+.hidden-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  cursor: pointer;
+  @include opacity(0);
+  .select-inactive & {
+    width: 100%;
+  }
+}
+
+/* Throbber */
+html.js input.form-autocomplete {
+	background-image: none;
+}
+ 
+html.js input.throbbing {
+	background-position: 98% 12px;
+	background-image: url("../img/status-active.gif");
+}
+
+/*
+========================================================================== 
+	Node Form / User profile form
+========================================================================== 
+*/
+.node-form,
+#user-profile-form,
+#edit-profile-user-profile-form,
+#user-register-form,
+#user-pass,
+#user-login {
+	.form-item {
+		margin: 1em 0 1.5em;
+		label {
+			margin: 0 0 0.25em 0;
+			font-size: $font-size-medium;
+		}
+		.description {
+			margin: 0.5em 0 0 0;
+			line-height: $line-height-std;
+		}
+	}
+	fieldset {
+		margin: 1em 0;
+		legend {
+			font-size: $font-size-medium;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+	}
+	.vertical-tabs {
+		margin: 2em 0 2em 15em;
+	}
+	.form-submit {
+		margin: 0 10px 0 0;
+	}
+}
+
+/*
+========================================================================== 
+	Comment Form
+========================================================================== 
+*/
+#comment-form {
+	@include box-std();
+	padding: 10px 20px;
+	.form-submit {
+		margin: 0 10px 0 0;
+	}
+}
+
+/*
+========================================================================== 
+	Private message form
+========================================================================== 
+*/
+.privatemsg-conversation {
+	.privatemsg-message-participants {
+		padding: 0 0 5px 0;
+		font-size: $font-size-medium;
+	}
+	.privatemsg-message {
+		margin-bottom: 10px;
+		.privatemsg-author-avatar {
+			
+		}
+		.privatemsg-message-column {
+			.privatemsg-message-information {
+				margin-bottom: 10px;
+				font-size: 1.25em;
+				padding-bottom: 5px;
+			}
+			.privatemsg-message-body {
+				margin: 0;
+			}
+		}
+	}
+	#privatemsg-new {
+		margin-top: 25px;
+	}
+}
+.privatemsg-list {
+	border: 1px solid #ddd;
+}
+
+/*
+========================================================================== 
+	Follow flag
+========================================================================== 
+*/
+.flag-commons-follow-group,
+.flag-commons-follow-user,
+.flag-commons-follow-node,
+.flag-commons-follow-topic {
+	a {
+		border-bottom: 2px solid #6c6c6b;		
+		@include background-image(linear-gradient(#a2a2a2, #838383));
+		@include button-link();
+		padding: 0.75em 1em 0.50em;
+	}
+	a.flag-action:before {
+		@include icon-prepare();
+		content: "\e60e";
+		margin: 0 7px 0 0;
+	}
+	a.unflag-action:before {
+		@include icon-prepare();
+		content: "\e612";
+		margin: 0 5px 0 0;
+	}
+	.flag-message {
+		top: 2.75em;
+	}
+}
+
+/*
+========================================================================== 
+	Add content buttons
+========================================================================== 
+*/
+
+.pane-node-create-links {
+	padding: 15px 20px;
+	@include box-std();
+	.pane-title {
+		margin: 0;
+		border: none;
+	}
+	.pane-content {
+		overflow: hidden;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			margin: 0 10px 0 0;
+		}
+	}
+	a {
+		@include button-link();
+	}
+}
+.grid-4,
+.grid-8,
+.grid-12 {
+	.pane-node-create-links {
+		.pane-title {
+			margin-bottom: 0;
+			border-bottom: 0;
+			line-height: 1.9em;
+		}
+		.pane-title:before {
+			@include icon-prepare();
+			font-size: 1.9em;
+			content: "\e60a";
+			vertical-align: middle;
+			margin: 0 5px 0 0;
+			position: relative;
+			top: -3px;
+		}
+	}
+}
+.grid-4 {
+	.pane-node-create-links {
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				width: 50%;
+				margin: 0 0 10px;
+				@include box-sizing(border-box);
+			}
+		}
+		a {
+			@include button-link();
+		}
+	}	
+}
+
+/*
+========================================================================== 
+	Admin - Organic groups
+========================================================================== 
+*/
+
+/* Administration list */
+dl.admin-list,
+dl.node-type-list {
+	dt {
+		font-size: $font-size-medium;
+		line-height: 1.50em;
+	}
+	dd {
+		padding: 0 0 10px 0;
+	}
+}
+
+/* Group administration */
+.page-group-node-admin {
+	form {
+		legend {
+			margin-bottom: 1em;
+		}
+		.form-item {
+			margin: 1em 0 1.5em;
+			label {
+				margin: 0 0 0.25em 0;
+				font-size: $font-size-medium;
+			}
+			.description {
+				margin: 0.5em 0 0 0;
+				line-height: $line-height-std;
+			}
+		}		
+	}
+	table {
+		.form-item {
+			margin: 0;
+		}
+	}
+}
+
+/* Members administration */
+.view-og-members-admin {
+	table {
+		border: 1px solid #ddd;
+	}
+	.item-list {
+		ul {
+			li {
+				margin: 0 0 5px;
+				padding: 0;
+			}
+		}
+	}
+	.view-header {
+		margin-bottom: 20px;
+	}
+	.views-exposed-form {
+		.views-exposed-widget {
+			width: 100%;
+			padding: 0;
+			margin: 0 0 1em 0;
+			.form-item {
+				margin: 0;
+				padding: 5px 0 10px 0;
+			}
+		}
+		.form-submit {
+			margin: 0;
+		}
+	}
+}

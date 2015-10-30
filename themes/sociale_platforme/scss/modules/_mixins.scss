@@ -1,0 +1,75 @@
+/*
+========================================================================== 
+	Buttons
+========================================================================== 
+*/
+
+@mixin button() {
+	font-family: $font-fam-std;
+	font-size: $font-size-std;
+	padding: 1em 1.75em 0.75em;
+	margin: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	color: white;
+	background-color: #a2a2a2;
+	border-bottom: 2px solid #6C6C6B;
+	max-width: 100%;
+	@include box-sizing(border-box);
+	@include background-image(linear-gradient(#a2a2a2, #838383));
+}
+
+@mixin button-link() {
+	font-family: $font-fam-std;
+	font-size: $font-size-std;
+	padding: 1em 1.75em 0.75em;
+	margin: 0;
+	cursor: pointer;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+	max-width: 100%;
+	@include box-sizing(border-box);
+}
+
+/*
+========================================================================== 
+	Boxes
+========================================================================== 
+*/
+
+@mixin box-std() {
+	background: white;
+	@include background-image(linear-gradient(#ffffff, #f8f8f8));
+	@include box-shadow(1px 1px 2px rgba(0,0,0,0.2));
+}
+
+
+/*
+========================================================================== 
+	Breakpoints
+========================================================================== 
+*/
+@mixin bp($point) {
+  @if $point == narrow {
+    @media all and (min-width: 740px) {
+      @content;
+    }
+  } @else if $point == normal {
+    @media all and (min-width: 980px) {
+      @content;
+    }
+  } @else if $point == wide {
+    @media all and (min-width: 1140px) {
+      @content;
+    }
+  } @else {
+    @media all and (min-width: $point + 'px') {
+      @content;
+    }
+  }
+}

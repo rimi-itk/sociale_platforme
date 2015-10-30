@@ -1,0 +1,153 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/*
+========================================================================== 
+	Imports
+========================================================================== 
+*/
+
+/* Base */
+@import "base";
+
+/* Partials */
+@import "partials/fonts";
+@import "partials/general";
+@import "partials/forms";
+@import "partials/navigation";
+@import "partials/nodes";
+@import "partials/comments";
+@import "partials/blocks";
+@import "partials/views";
+
+/*
+========================================================================== 
+	General
+========================================================================== 
+*/
+
+body {
+	font-size: 13px;
+	font-family: $font-fam-std;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+table {
+	margin: 10px 0;
+	padding: 0;
+	width: 100%;	
+	th {
+		font-weight: bold;
+	}
+	td, th {
+		border-bottom: 0;
+		margin: 0;
+		padding: 10px 8px;
+	}
+}
+h1 {
+	font-size: $font-size-larger;
+	line-height: $line-height-std;
+	margin-bottom: 0.5em;
+}
+h2 {
+	font-size: $font-size-large;
+	line-height: $line-height-std;
+	margin-bottom: 0.5em;
+}
+h3 {
+	font-size: $font-size-medium;
+	line-height: $line-height-std;
+	margin-bottom: 0.5em;
+}
+ul {
+	margin: 0; padding: 0;
+	list-style: none;
+	li {
+		list-style: none;
+		margin: 0; padding: 0;
+	}
+}
+
+/*
+========================================================================== 
+	Layout
+========================================================================== 
+*/
+
+#section-content {
+	border-top: 1px solid white;
+}
+#zone-user-wrapper {
+	background: white;
+	padding:  0 0 10px 0;
+	position: relative;
+	@include box-shadow(0 2px 0 1px white);	
+}
+#zone-user-wrapper:after {
+	display: block;
+	height: 1px;
+	width: 100%;
+	background: white;
+	position: absolute;
+	bottom: -2px;
+	z-index: 3;
+	content: "";
+}
+#zone-menu-wrapper {
+	background: white;
+	padding: 0 0 3px;
+}
+#zone-header-wrapper {
+	background: gray;
+	position: relative;
+	max-height: 240px;
+	overflow: hidden;
+}
+#zone-content-wrapper {
+	padding: 15px 0 0;
+}
+#zone-postscript-wrapper {
+	background: white;
+	padding: 40px 0;
+	margin: 30px 0 10px;
+	@include box-shadow(0 1px 3px 0 rgba(0,0,0,0.2));
+	@include background-image(linear-gradient(white, #f8f8f8));
+}
+#zone-footer-wrapper {
+	padding: 30px 0 50px 0;
+}
+#region-header {
+	position: inherit;
+}
+
+/* Hide elements */
+#region-user {
+	//display: none;
+}
+
+/*
+========================================================================== 
+	Frontpage
+========================================================================== 
+*/
+
+.front {
+	#zone-content-wrapper {
+		padding: 15px 0 0;
+	}
+}
+.front.not-logged-in {
+	#section-header,
+	#section-content {
+		border: none;
+	}	
+	.panel-footer {
+		margin-top: 55px;
+		.panel-pane {
+			margin-bottom: 0;
+		}
+	}
+}

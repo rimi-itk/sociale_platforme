@@ -1,0 +1,46 @@
+/*
+========================================================================== 
+	Colors
+========================================================================== 
+*/
+
+/* Theme colors */
+$color-base: #8cb385;
+$color-base-dark: #5e7f58;
+
+$color-base-btn-top: #90b889;
+$color-base-btn-btm: #789a72;
+
+$color-base-body-bg: #e8e8e3;
+
+/* Standard colors */
+$color-gray: #372f2b;
+$color-gray-light: #888888;
+$color-gray-lighter: #c0c0c0;
+$color-gray-lightest: #d0d0cc;
+
+/*
+========================================================================== 
+	Element Colors
+========================================================================== 
+*/
+
+$text-color-std: $color-gray;
+
+
+/*
+========================================================================== 
+	Fonts and Text
+========================================================================== 
+*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+$font-fam-std: "PT Sans", sans-serif;
+
+$font-size-larger: 2.30em;
+$font-size-large: 1.25em;
+$font-size-medium: 1.15em;
+$font-size-std: 1em;
+
+$line-height-std: 1.25em;

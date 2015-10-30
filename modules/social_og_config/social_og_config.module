@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * social_og_config.module
+ */
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function social_og_config_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function social_og_config_entity_info_alter(&$entity_info) {
+  // Example Widget.
+  $entity_info['fieldable_panels_pane']['bundles']['logolist'] = array(
+    'label' => t('Logo list'),
+    'pane category' => 'Sociale platforme',
+    'pane top level' => TRUE,
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/logolist',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}

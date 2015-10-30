@@ -1,0 +1,72 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+
+@import "base";
+
+/*
+==========================================================================
+	Blocks
+==========================================================================
+*/
+
+/* Banner frontpage */
+.block-frontpage-banner {
+	.block-inner {
+		width: 50%;
+	}
+}
+
+/* User region */
+#region-user {
+	text-align: right;
+	.block {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1em;
+		float: none;
+	}
+	.block.even {
+		margin-left: 15px;
+	}
+}
+
+/* Login */
+#block-user-login {
+	input[type=text],
+	input[type=password],
+	input[type=email] {
+		min-width: 12em;
+	}
+}
+
+/*
+==========================================================================
+	Views
+==========================================================================
+*/
+
+/* Exposed filters */
+.quicktabs-tabpage,
+.page-events,
+.view-sp-groups  {
+	.view-filters {
+		.views-exposed-widget {
+			margin: 0 25px 0 0;
+		}
+	}
+}
+
+/* Groups */
+.view-sp-groups.groups-grid {
+	.view-content {
+		width: 103%;
+	}
+	.views-row {	
+		.panel-panel.grid-12 & {
+  	  float: left;
+      width: 31%;
+  		margin-right: 2%;  
+		}
+	}
+}

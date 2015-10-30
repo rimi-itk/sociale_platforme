@@ -1,0 +1,235 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal
+ *  and widescreen CSS files as appropriate. */
+/* Compass */
+/* Modules */
+/*
+========================================================================== 
+	Colors
+========================================================================== 
+*/
+/* Theme colors */
+/* Standard colors */
+/*
+========================================================================== 
+	Element Colors
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Fonts and Text
+========================================================================== 
+*/
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+/*
+========================================================================== 
+	Buttons
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Boxes
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Breakpoints
+========================================================================== 
+*/
+/* line 2, ../scss/modules/_extends.scss */
+.view-sp-groups.groups-grid .view-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+==========================================================================
+	Zones
+==========================================================================
+*/
+/* line 13, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#zone-content-wrapper {
+  padding: 30px 0 0;
+}
+
+/* line 16, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#zone-menu-wrapper {
+  background: white;
+  padding: 12px 0;
+}
+
+/*
+==========================================================================
+	Views
+==========================================================================
+*/
+/* Groups */
+/* line 34, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-8 .view-sp-groups.groups-grid .views-row, .panel-panel.grid-12 .view-sp-groups.groups-grid .views-row {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+/* line 43, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-8 .view-sp-groups.groups-grid .views-row.views-row-even {
+  margin-right: 0;
+}
+
+/* Show elements */
+/* line 52, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-user {
+  display: block;
+}
+
+/* Exposed filters */
+/* line 61, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.quicktabs-tabpage .view-filters .views-exposed-widget,
+.page-events .view-filters .views-exposed-widget,
+.view-sp-groups .view-filters .views-exposed-widget {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
+
+/* Browsing Widget - Quick Tabs */
+/* line 75, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#quicktabs-container-commons_bw .quicktabs-tabpage .view .views-row article .author div.follow {
+  margin: 0;
+  float: right;
+}
+
+/*
+==========================================================================
+	Menus
+==========================================================================
+*/
+/* line 91, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.block-main-menu {
+  display: block !important;
+}
+
+/* line 97, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#zone-menu ul.menu li,
+#zone-menu ul.main-menu li {
+  list-style: none;
+  float: left;
+  margin: 0;
+  padding: 0;
+  font-size: 1.38em;
+  margin-right: 58px;
+}
+/* line 104, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#zone-menu ul.menu li a,
+#zone-menu ul.main-menu li a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #372f2b;
+  border-top: 0;
+}
+
+/* line 115, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#block-mobile-menu-toggle-mobile-menu-toggle {
+  display: none;
+}
+
+/*
+==========================================================================
+	Blocks
+==========================================================================
+*/
+/* Branding */
+/* line 126, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.branding-data {
+  width: 100%;
+  float: none;
+}
+
+/* User region */
+/* line 132, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-user {
+  text-align: right;
+}
+/* line 134, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-user .block {
+  display: block;
+  float: right;
+  margin: 10px 0 0 0;
+}
+/* line 139, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-user .block.even {
+  margin: 10px 0 0 0;
+}
+
+/* Footer region */
+/* line 145, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-footer-first {
+  text-align: left;
+}
+
+/* line 148, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#region-footer-second {
+  margin-top: 0;
+  text-align: right;
+}
+
+/* Add content pane */
+/* line 156, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-12 .pane-content-add .pane-title {
+  width: 25%;
+}
+/* line 159, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-12 .pane-content-add .pane-content {
+  width: 75%;
+}
+/* line 162, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-12 .pane-content-add .desc {
+  width: 66%;
+}
+/* line 165, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-12 .pane-content-add .btn-wrapper {
+  width: 33%;
+}
+/* line 167, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.panel-panel.grid-12 .pane-content-add .btn-wrapper .btn-link {
+  margin-top: 0;
+  float: right;
+}
+
+/* Logos */
+/* line 178, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.pane-bundle-logolist .pane-content .field-item {
+  height: 75px;
+}
+
+/* Login block */
+/* line 186, ../scss/sociale-platforme-alpha-default-narrow.scss */
+#block-user-login input[type=text],
+#block-user-login input[type=password],
+#block-user-login input[type=email] {
+  min-width: inherit;
+}
+
+/*
+==========================================================================
+	Frontpage
+==========================================================================
+*/
+/* line 200, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.front #zone-content-wrapper {
+  padding: 70px 0 0;
+}
+
+/* line 205, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.block-frontpage-banner {
+  padding: 25px 35px;
+}
+/* line 207, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.block-frontpage-banner .block-title {
+  font-size: 3.45em;
+}
+/* line 210, ../scss/sociale-platforme-alpha-default-narrow.scss */
+.block-frontpage-banner .subtitle {
+  font-size: 1.7em;
+}

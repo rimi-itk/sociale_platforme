@@ -1,0 +1,7 @@
+name = Social Platforms messages
+description = Helper module for correct links.
+core = 7.x
+package = Social Platforms - Custom modules
+project = social_messages
+dependencies[] = privatemsg
+files[] = social_messages.module

@@ -1,0 +1,39 @@
+/*
+========================================================================== 
+	General Elements
+========================================================================== 
+*/
+table {
+	width: 100%;
+	td {
+		padding: 0.5em;
+	}
+}
+
+/*
+========================================================================== 
+	General Text
+========================================================================== 
+*/
+
+h1#page-title {
+	font-size: $font-size-larger;
+	line-height: $line-height-std;
+	margin-bottom: 1em;
+	font-weight: normal;
+}
+#section-content {
+	color: $color-gray;
+	.panel-panel {
+		font-size: $font-size-std;
+		line-height: $line-height-std;
+	}
+}
+
+/**
+ * Buttons
+ */
+ 
+.btn-link {
+	@include button-link();
+}

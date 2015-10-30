@@ -1,0 +1,28 @@
+name = Sociale Platforme
+description = "A community solution based on Commons."
+exclusive = 1
+core = 7.x
+
+base profile = commons
+
+dependencies[] = colorbox
+dependencies[] = field_permissions
+dependencies[] = multiupload_filefield_widget
+dependencies[] = multiupload_imagefield_widget
+dependencies[] = config_builder
+dependencies[] = config_builder_ui
+dependencies[] = form_builder
+dependencies[] = tipsy
+dependencies[] = user_stats
+dependencies[] = web_widgets
+dependencies[] = fieldable_panels_panes
+dependencies[] = features_override
+> dependencies[] = mobile_menu_toggle
+; SP - Custom modules
+dependencies[] = social_blocks
+dependencies[] = social_messages
+dependencies[] = social_misc
+dependencies[] = social_og_config
+dependencies[] = social_privatemsg_alter
+dependencies[] = social_translations
+dependencies[] = social_user_search

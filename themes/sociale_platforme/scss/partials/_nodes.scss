@@ -1,0 +1,238 @@
+/*
+========================================================================== 
+	Node - General styling
+========================================================================== 
+*/
+article.node {
+	.field {
+		margin-bottom: 15px;
+	}
+	p {
+		margin-bottom: 15px;
+		line-height: $line-height-std;
+	}
+	.author {
+		> a {
+			display: inline-block;
+			margin-right: 10px;
+			img {
+				width: 33px;
+				height: 33px;
+			}
+		}
+		div.created {
+			height: 33px;
+			display: inline-block;
+			line-height: $line-height-std;
+			color: $color-gray-light;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+	footer.submitted {
+		padding: 12px 0 24px;
+		color: $color-gray-light;
+		.comment-count {
+			float: right;
+			position: relative;
+			padding: 0 0 0 1.7em;
+			.icon-comments {
+				font-size: 1.4em;
+				position: absolute;
+				top: -1px;
+				left: 0;
+			}
+		}
+	}
+	.content {
+		line-height: $line-height-std;
+		.form-item.form-type-item {
+			float: left;
+			width: 50%;
+			margin: 1em 0;
+			height: 35px;
+			line-height: 35px;
+			label {
+				display: none;
+			}
+			.rate-widget {
+				line-height: 1.25em;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+		div.follow {
+			float: right;
+			width: 50%;
+			margin: 1em 0;
+			text-align: right;
+			height: 35px;
+			.links li {
+				margin: 0;
+				padding: 0;
+			}
+			.flag-message {
+				top: 2.5em;
+			}
+			a {
+				border-bottom: 2px solid #6c6c6b;		
+				@include background-image(linear-gradient(#a2a2a2, #838383));
+				@include button-link();
+				padding: 0.75em 1em 0.50em;
+			}
+			a.flag-action:before {
+				@include icon-prepare();
+				content: "\e60e";
+				margin: 0 7px 0 0;
+			}
+			a.unflag-action:before {
+				@include icon-prepare();
+				content: "\e612";
+				margin: 0 5px 0 0;
+			}
+		}
+	}	
+	nav.node-links {
+		padding: 15px 0;
+		border-top: 1px solid $color-gray-lightest;
+		border-bottom: 1px solid $color-gray-lightest;
+		margin-top: 15px;
+		height: 38px; line-height: 38px;
+		ul:last-child {
+			float: right;
+		}
+		ul:first-child {
+			float: left;
+			li.comment-add {
+				a {
+					line-height: 1em;
+					border-bottom: 2px solid #6c6c6b;		
+					@include background-image(linear-gradient(#a2a2a2, #838383));
+					@include button-link();
+				}
+			}
+		}
+	}
+}
+
+.rate-widget {
+	overflow: hidden;
+	line-height: $line-height-std;
+	.rate-button {
+		background: white;
+		border: 1px solid #cbcbcb;
+		float: left;
+		padding: 5px 10px 4px;
+		text-decoration: none;
+		color: #666666;
+		border-right: 0;
+		height: $line-height-std;
+		@include border-top-left-radius(2px);
+		@include border-bottom-left-radius(2px);		
+		@include background-image(linear-gradient(#ffffff, #f1f1f1));
+	}
+	.rate-button:active {
+		@include background-image(linear-gradient(#f1f1f1, #ffffff));
+	}
+	.rate-button:before {
+		@include icon-prepare();
+		content: "\e609";
+		margin: 0 5px 0 0;
+	}
+	.rate-commons-like-count {
+		padding: 5px 7px 4px;
+		float: left;
+		color: #666666;
+		background: #cccccc;
+		border: 1px solid #858585;
+		margin-left: -1px;
+		height: $line-height-std;
+		@include border-top-right-radius(2px);
+		@include border-bottom-right-radius(2px);
+	}
+}
+
+/*
+========================================================================== 
+	Poll
+========================================================================== 
+*/
+
+.poll {
+	.vote-form {
+		text-align: left;
+		margin: 0 0 15px 0;
+		.choices {
+			margin: 0 0 5px 0;
+			display: block;
+		}
+	}	
+}
+
+.node-poll {
+	.poll {
+		.text {
+			font-size: $font-size-medium;
+		}
+		.bar {
+			margin: 5px 0;
+			background: $color-gray-lighter;
+		}
+		.percent {
+			font-style: italic;
+			margin: 0 0 5px 0;
+		}
+		.total {
+			text-align: left;
+			font-size: $font-size-medium;
+			margin: 15px 0;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Event
+========================================================================== 
+*/
+
+form.commons-events-form-float {
+	float: none;
+	margin: 0 0 20px;
+	.commons-event-status {
+		display: inline-block;
+		margin: 0 0 0 10px;
+	}
+}
+
+/*
+========================================================================== 
+	Gallery
+========================================================================== 
+*/
+.node-gallery {
+	.field-name-field-gallery-image {
+		.field-item {
+			display: inline-block;
+			margin: 0 5px 5px 0;
+			img {
+				border: 5px solid white;
+				width: 140px;
+				@include box-shadow(0 0 2px 0 rgba(0,0,0,0.15))
+			}
+		}
+	}
+	.author {
+		margin-bottom: 15px;
+	}
+}
+.node-gallery.node-teaser {
+		.field-name-field-gallery-image {
+		.field-item {
+			img {
+				width: 127px;
+			}
+		}
+	}
+}

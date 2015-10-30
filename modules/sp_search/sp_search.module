@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP Search feature.
+ */
+
+include_once 'sp_search.features.inc';

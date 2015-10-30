@@ -1,0 +1,10 @@
+name = SP Latest content
+description = Provides the latest content page.
+core = 7.x
+package = SP - Landing pages
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panelizer
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = sp_latest_content

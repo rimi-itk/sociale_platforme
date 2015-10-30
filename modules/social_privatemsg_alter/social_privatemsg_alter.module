@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * social_privatemsg_alter.module
+ */
+
+/**
+ * Implements hook_FORM_ID_form_alter().
+ */
+function social_privatemsg_alter_search_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == "commons_trusted_contacts_messages_popup") {
+    $form['subject']['#type'] = 'textfield';
+    $form['subject']['#default_value'] = '';
+  }
+}

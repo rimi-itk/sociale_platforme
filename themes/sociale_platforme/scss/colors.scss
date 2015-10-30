@@ -1,0 +1,377 @@
+/* Base */
+@import "base";
+
+/*
+========================================================================== 
+	General
+========================================================================== 
+*/
+
+body {
+  background: $color-base-body-bg;
+}
+#section-header {
+	border-bottom: 1px solid $color-base-body-bg;
+}
+
+/* Buttons */
+form {
+	#edit-submit,
+	#edit-vote,
+	input[id^='edit-vote--'],
+	input[id^='edit-submit--'],
+	input[type=button] {
+		background: $color-base;
+		border-bottom: 2px solid $color-base-dark;
+		@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+	}
+	#edit-cancel {
+		color: $color-base;
+	}
+}
+a.btn {
+	@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+	border-bottom: 2px solid $color-base-dark;
+}
+a.btn-link {
+	@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+	border-bottom: 2px solid $color-base-dark;
+}
+
+/* Content create buttons */
+.pane-node-create-links {
+	ul {
+		li {
+			a {
+				@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+				border-bottom: 2px solid $color-base-dark;	
+			}
+		}
+	}
+}
+
+/* Content Links */
+#zone-user {
+	a {
+		color: $color-base;
+	}
+}
+#zone-footer {
+	a {
+		color: $color-base;
+	}
+}
+.more-link {
+	a {
+		color: $color-base;
+	}
+}
+
+/* Icons */
+#block-search-form {
+	button[type=submit] {
+		color: $color-base;
+	}
+}
+
+/* Flags */
+.follow {
+	.flag-commons-follow-group {
+		a {
+			border-bottom: 2px solid $color-base-dark;
+			@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Nodes
+========================================================================== 
+*/
+.node {
+	.content .field{
+		a {
+			color: $color-base;
+		}
+	}
+	.author {
+		a {
+			color: $color-base;
+		}
+	}
+	nav.links {
+		a {
+			color: $color-base;
+		}
+	}
+}
+
+/* Group Pane */
+.node-group .content {
+	.field {
+		.action-item-primary {
+			color: white;
+			border-bottom: 2px solid $color-base-dark;
+			@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));	
+		}
+	}
+}
+
+.group-reference {
+  a {
+    color: $color-base;
+  }
+}
+
+/*
+========================================================================== 
+	Comments
+========================================================================== 
+*/
+article.comment {
+	.comment-title {
+		a {
+			color: $color-base;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Views
+========================================================================== 
+*/
+.view {	
+	.view-filters {
+		a {
+			color: $color-base;
+		}
+	}
+	.views-row {
+		.content,
+		.created,
+		.submitted
+		 {
+				a {
+					color: $color-base;
+				}			
+		}
+	}
+	.views-field-field-group-tags {
+		a {
+			color: $color-base;
+		}
+	}
+}
+
+
+#quicktabs-groups_directory ul.quicktabs-tabs li.active a:before {
+  color: $color-base;
+}
+
+/*
+========================================================================== 
+	Search
+========================================================================== 
+*/
+.page-search {
+	.search-info {
+		a {
+			color: $color-base;	
+		}
+	}
+	.panel-right .panel-pane a {
+		color: $color-base;
+	}
+}
+
+/*
+========================================================================== 
+	Blocks
+========================================================================== 
+*/
+
+.profile-msg {
+	h3 {
+		background: $color-base;
+	}
+	span[class^="icon-"] {
+		color: $color-base;
+	}
+}
+
+.block-community-stats {
+	.content {
+		.subtitle {
+			color: $color-base;
+		}
+		.stats {
+			> div {
+				span {
+					color: $color-base;
+				}
+			}
+		}
+	}
+}
+
+.pane-community-stats {
+	span[class^="icon-"] {
+		color: $color-base;
+	}	
+}
+
+.block-frontpage-banner {
+	.banner-register {
+		a {
+			color: $color-base;
+		}
+	}
+}
+
+.pane-quick-tip {
+	.pane-title {
+		color: $color-base;
+	}
+	a {
+		color: $color-base;
+	}
+}
+
+.grid-4 {
+	.pane-node-content {
+		.pane-content {
+			.follow-counter {
+				span.icon-bruger {
+					color: $color-base;
+				}
+			}
+			.follow {
+				a {
+					@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+					border-bottom: 2px solid $color-base-dark;
+				}
+			}
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Navigation
+========================================================================== 
+*/
+
+/* Main Menu */
+#zone-menu {
+	ul.menu,
+	ul.main-menu {
+		li {
+			a.active {
+				color: $color-base;
+			}
+		}
+	}
+}
+
+/* Tabs */
+.quicktabs-style-commons-pills {
+	ul.quicktabs-tabs {
+		li.active {
+			margin-bottom: 10px;
+			a {
+				@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+				@include box-shadow(0 2px 0 0 $color-base-dark);		
+				span {
+					border-left: 1px solid $color-base-dark;
+				}
+			}
+		}
+	}
+}
+ul.tabs {
+	li {
+		a.active {
+			@include background-image(linear-gradient($color-base-btn-top, $color-base-btn-btm));
+			@include box-shadow(0 2px 0 0 $color-base-dark);					
+		}
+	}
+}
+
+/* Pagers */
+ul.pager {
+	li {
+		a {
+			color: $color-base;
+		}
+	}
+}
+
+/* Polls */
+.node-poll {
+	.poll {
+		.foreground {
+			background: $color-base;
+		}
+	}
+}
+
+/* Quicktabs profile */
+#quicktabs-commons_follow_ui,
+#quicktabs-commons_trusted_contacts {
+	a {
+		color: $color-base;
+	}
+	.flag-commons-follow-group,
+	.flag-commons-follow-user,
+	.flag-commons-follow-node,
+	.flag-commons-follow-topic {
+		a {
+			color: white;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Forms and Admin pages
+========================================================================== 
+*/
+.node-form,
+.comment-form,
+#user-profile-form,
+#user-register-form,
+#edit-profile-user-profile-form {
+	a {
+		color: $color-base;
+	}
+}
+		
+.view-og-members-admin {
+	a {
+		color: $color-base;
+	}
+}
+
+dl.admin-list {
+	a {
+		color: $color-base;
+	}
+}
+
+/*
+========================================================================== 
+	Profile tabs
+========================================================================== 
+*/
+#privatemsg-list {
+	a {
+		color: $color-base;
+	}
+}
+.privatemsg-conversation {
+	a {
+		color: $color-base;
+	}
+}

@@ -1,0 +1,1055 @@
+/*
+========================================================================== 
+	Panels
+========================================================================== 
+*/
+
+.panel-box {
+	@include box-std();
+}
+
+.panel-pane {
+	margin: 0 0 30px 0;
+	.pane-title {
+		font-size: $font-size-large;
+		text-transform: uppercase;
+		font-weight: bold;
+		border-bottom: 2px solid $color-gray-lighter;
+		padding: 0 0 12px 0;
+		margin: 0 0 20px 0;
+	}
+	.pane-content {
+		p {
+			margin-bottom: 1em;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+/* Panels - Grid specific styling */
+
+/* Grid 12 */
+.grid-12 {
+	.panel-box {
+		padding: 18px 35px;
+		.pane-title {
+
+		}
+	}
+}
+
+/* Grid 8 */
+.grid-8 {
+	.panel-box {
+		
+	}
+}
+
+/* Grid 4 */
+.grid-4 {
+	.panel-box {
+		
+	}
+}
+
+/*
+========================================================================== 
+	Logos - content pane
+========================================================================== 
+*/
+
+.pane-bundle-logolist {
+	.pane-title {
+		text-align: center;
+	}
+	.pane-content {
+		.field-item {
+			width: 25%;
+			display: inline-block;
+			text-align: center;
+			margin: 10px 0;
+			img {
+				vertical-align: middle;
+			}
+		}
+	}
+}
+.grid-4 {
+	.pane-bundle-logolist {
+		.pane-title {
+			text-align: left;
+		}
+		.pane-content {
+			.field-item {
+				width: 50%;
+			}
+		}
+	}	
+}
+
+/*
+========================================================================== 
+	Active user profile - content pane
+========================================================================== 
+*/
+
+.pane-profile-info {
+
+	.pane-title {
+		border: none;
+		margin-bottom: 0;
+		padding-bottom: 18px;
+	}
+	
+	.profile-msg {
+		margin-bottom: 5px;
+		h3 {
+			padding: 12px 20px 11px;
+			margin: 0;
+			color: white;
+			text-transform: uppercase;
+			font-weight: normal;
+			@include box-shadow(1px 1px 2px rgba(0,0,0,0.2));
+		}
+		.msg-list {
+			padding: 20px 20px 20px;
+			font-size: 14px;
+			@include box-std();	
+			a {
+				color: $text-color-std;
+			}	
+		}
+		.new-msg {
+			margin-bottom: 9px;
+		}
+		.new-msg,
+		.new-invites {
+			a {
+				height: 20px;
+				line-height: 20px;
+				display: inline-block;
+			}
+			span {
+				font-size: 1.25em;
+				vertical-align: middle;
+				float: left;
+				margin: 0 7px 0 0;
+			}
+		}
+	}
+	.profile-info {
+		padding: 25px 25px 25px;
+		overflow: hidden;
+		@include box-std();
+		h2 {
+			text-transform: uppercase;
+			margin-bottom: 15px;
+			font-size: $font-size-medium;			
+		}
+		img {
+			width: 80px;
+			height: 80px;
+			float: left;
+			margin: 0 15px 5px 0;
+		}
+		.field-name-field-bio {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Profile page
+========================================================================== 
+*/
+.page-user {
+	.pane-user-group-group,
+	.pane-user-flag-commons-follow-user-link {
+		float: left;
+		margin: 0 15px 30px 0;
+	}
+	.pane-user-group-group {
+		clear: left;
+		a {
+			border-bottom: 2px solid #6c6c6b;		
+			@include background-image(linear-gradient(#a2a2a2, #838383));
+			@include button-link();
+			padding: 0.75em 1em 0.50em;
+		}
+	}
+	.pane-user-field-facebook-url,
+	.pane-user-field-linkedin-url,
+	.pane-user-field-twitter-url {
+		float: left;
+		margin: 0 20px 30px 0;
+		a {
+			color: $text-color-std;
+			display: inline-block;
+			height: 32px;
+			line-height: 32px;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		a:before {
+			vertical-align: middle;
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			margin: 0 6px 0 0;
+		}
+	}
+	.pane-user-field-facebook-url {
+		a:before {
+			content: url('../img/facebook.png');
+		}
+	}
+	.pane-user-field-linkedin-url {
+		a:before {
+			content: url('../img/linkedin.png');
+		}
+	}
+	.pane-user-field-twitter-url {
+		a:before {
+			content: url('../img/twitter.png');
+		}
+	}
+}
+
+
+/*
+========================================================================== 
+	Users (Who is online etc.) - content pane
+========================================================================== 
+*/
+
+.view-sp-who-s-online,
+.view-sp-group-followers,
+.view-sp-trusted-contacts,
+.view-commons-follow-user-following,
+.view-commons-follow-user-followers,
+.view-commons-events-organizers,
+.view-commons-events-event-attendee-list,
+.view-commons-contributors-group {
+	overflow: hidden;
+	width: 102%;
+	background: none;
+	.views-row {
+		float: left;
+		width: 99px;
+		margin: 0 6px 6px 0;
+		a {
+			display: block;
+		}
+		img {
+			@include transition-property(all);
+			@include transition-duration(250ms);
+			@include filter(grayscale(1));			
+		}
+		img:hover {
+			@include filter(grayscale(0));			
+		}
+		.views-field-name {
+			display: none;
+		}
+	}
+	ul.pager {
+		margin: 10px 0;
+		float: left;
+		width: 100%;
+	}
+}
+.grid-4 {
+	.view-sp-who-s-online,
+	.view-sp-group-followers,
+	.view-sp-trusted-contacts,
+	.view-commons-follow-user-following,
+	.view-commons-follow-user-followers,
+	.view-commons-events-organizers,
+	.view-commons-events-event-attendee-list,
+	.view-commons-contributors-group {
+		.views-row {
+			width: 23%;
+			margin: 0 2% 5px 0;
+		}
+	}
+}
+.grid-8 {
+	.view-sp-who-s-online,
+	.view-sp-group-followers,
+	.view-sp-trusted-contacts,
+	.view-commons-follow-user-following,
+	.view-commons-follow-user-followers,
+	.view-commons-events-organizers,
+	.view-commons-events-event-attendee-list,
+	.view-commons-contributors-group {
+		.views-row {
+			margin: 0 5px 5px 0;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Quick tip - content pane
+========================================================================== 
+*/
+
+.pane-quick-tip {
+	padding: 25px 30px;
+	@include box-std();
+	.pane-title {
+		border: none;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		font-weight: normal;
+		margin-bottom: 0;
+	}
+	.pane-title:before {
+		@include icon-prepare();
+		content: "\e608";
+		font-size: 1.75em;
+		vertical-align: middle;
+		margin: 0 0 0 0;
+		position: relative;
+		top: -3px;
+		left: -5px;
+	}
+	.pane-content {
+		
+	}
+}
+
+/*
+========================================================================== 
+	Node content - content pane	
+========================================================================== 
+*/
+
+.grid-4 {
+	.pane-node-content {
+		padding: 20px 20px;
+		@include box-std();
+		.pane-title {
+			border: none;
+			margin-bottom: 0;
+		}
+		.pane-content {
+			.form-item.form-type-item {
+				float: none;
+			}
+			.follow-counter {
+				overflow: hidden;
+				.count-left {
+					float: left;
+					margin: 0 10px 0 0;
+					font-size: 2.5em;
+				}
+				.count-right {
+					span {
+						color: $color-gray-light;
+					}
+					strong {
+						display: block;
+						font-size: $font-size-medium;
+					}
+				}
+			}
+			.follow {
+				margin: 20px 0 20px;
+				float: none;
+				width: auto;
+				height: auto;
+				text-align: left;
+			}
+			.author {
+				h4 {
+					font-size: $font-size-medium;
+					margin-bottom: 15px;
+				}
+				img {
+					width: 40px;
+					height: 40px;
+				}
+				.name {
+					font-size: $font-size-medium;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+/* Group pane */
+.node-group {
+	.subscription-type {
+		color: red;
+		margin-bottom: 10px;
+	}
+	.action-item-primary {
+		color: white;
+		@include button-link();
+	}
+}
+
+/*
+========================================================================== 
+	Add group/event - content pane
+========================================================================== 
+*/
+
+.pane-content-add {
+	overflow: hidden;
+	@include box-std;
+	padding: 25px 30px;
+	.pane-title {
+		float: left;
+		width: 100%;
+		border-bottom: none;
+		padding: 0 0 0 40px;
+		margin: 0 0 15px 0;
+		position: relative;
+		line-height: 2.25em;
+		@include box-sizing(border-box);
+	}
+	.pane-title:before {
+		@include icon-prepare();
+		@extend .icon-gruppe:before;
+		font-size: 1.9em;
+		position: absolute;
+		left: 0;
+		top: 1px;
+	}
+	.pane-content {
+		width: 100%;
+		float: left;
+		line-height: 1.25em;
+		@include box-sizing(border-box);
+	}
+	.desc {
+		display: inline-block;
+		font-style: italic;
+		width: 100%;
+		line-height: 1.25em;
+		vertical-align: middle;
+		margin-bottom: 15px;
+		@include box-sizing(border-box);
+	}
+	.btn-wrapper {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		@include box-sizing(border-box);
+		.btn-link {
+			color: white;
+			line-height: 1em;
+		}
+	}
+}
+.panel-panel.grid-12 {
+	.pane-content-add {
+		.pane-title {
+			padding: 0 0 0 40px;
+			margin: 0 0 0 0;
+			width: 100%;
+		}
+		.pane-content {
+			width: 100%;
+		}
+		.desc {
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+			margin-bottom: 0;
+		}
+		.btn-wrapper {
+			width: 100%;
+			display: inline-block;
+			vertical-align: middle;
+			.btn-link {
+				margin-top: 10px;
+				float: left;
+			}
+		}
+	}
+}
+
+#add-group.panel-pane {
+	.pane-title:before {
+		content: "\e610";	
+	}
+}
+#add-event.panel-pane {
+	.pane-title:before {
+		content: "\e600";	
+		font-size: 1.75em;
+	}
+}
+
+/*
+========================================================================== 
+	Contibutors - content pane
+========================================================================== 
+*/
+
+.view-sp-contributors-sitewide {
+	overflow: hidden;
+	.views-row {
+		float: left;
+		width: 32%;
+		margin-bottom: 10px;
+	}
+	.views-row-2,
+	.views-row-5 {
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+	.views-row-7,
+	.views-row-8,
+	.views-row-9,
+	.views-row-10 {
+		display: none;
+	}
+}
+
+/*
+========================================================================== 
+	Most active groups - content pane
+========================================================================== 
+*/
+
+.view-sp-most-active-groups {
+	.views-row {
+		border-bottom: 1px solid $color-gray-lightest;
+		margin: 0;
+		padding: 10px 0;
+		font-size: $font-size-medium;
+		a {
+			color: $text-color-std;
+			text-decoration: none;
+		}
+	}
+	.views-row-first {
+		padding: 0 0 10px;
+	}
+	.views-row-last {
+		padding: 10px 0 0;
+		border-bottom: none;
+	}
+}
+
+/*
+========================================================================== 
+	Region based styling
+========================================================================== 
+*/
+
+/* User region */
+#region-user {
+	
+	@include bp(narrow) {
+    text-align: right;	
+	}
+	.block {
+		@include bp(narrow) {
+  	  display: inline-block;
+      vertical-align: middle;
+      line-height: 1em;	
+		}
+	}
+	.block.even {
+  	@include bp(narrow) {
+      margin-left: 15px;	
+  	}
+		
+	}
+}
+.logged-in {
+	#region-user {
+		//height: 87px;
+		//line-height: 87px;		
+		
+	}
+}
+
+/* Footer region */
+#region-footer-first,
+#region-footer-second {
+	text-align: center;
+	.block {
+		font-size: $font-size-medium;
+		color: #5f5f5f;
+		a {
+			color: #5f5f5f;
+			text-decoration: none;
+		}
+	}
+}
+#region-footer-second {
+	margin-top: 20px;
+}
+
+#panels-ipe-regionid-footer {
+	.panel-pane {
+		margin: 10px 0 30px 0;
+	}
+}
+.panel-left {
+	margin-bottom: 15px;
+}
+
+/*
+========================================================================== 
+	Login block
+========================================================================== 
+*/
+
+#block-user-login {
+	
+	padding: 2em 0 2em 0;
+	text-align: center;
+  @include bp(narrow) {
+    //float: right;
+  	width: 100%;
+  	position: relative;
+  	top: -10px;	
+  	text-align: right;
+	}
+	.form-item {
+		display: block;
+		margin: 0 0 10px 0;
+		@include bp(450) {
+  	  display: inline-block;
+      margin: 0 10px 0 0;	
+		}
+		@include bp(narrow) {
+  	  margin: 0 0 0 10px;	
+		}
+	}
+	.form-actions {
+		display: inline-block;
+		margin: 0;
+		@include bp(450) {
+  		margin: 0 10px 0 0;	
+		}
+		@include bp(narrow) {
+  		margin: 0 0 0 10px;
+		}
+	}
+	label {
+		display: none;
+	}
+	input[type=text],
+	input[type=password],
+	input[type=email] {
+		font-size: $font-size-std;
+		padding: 0.65em 1em;
+		width: 100%;
+		@include bp(narrow) {
+  	  font-size: $font-size-medium;
+      min-width: 12em;	
+      width: auto;
+		}
+	}
+	input[type=submit] {
+		font-size: $font-size-std;
+		padding: 0.65em 1em;
+		margin: 0;
+		@include bp(narrow) {
+  	  padding: 0.85em 2em 0.7em;	
+		}
+	}
+	.item-list {
+  	position: absolute;
+    left: 0;
+    bottom: 1px;	
+    width: 100%;
+		@include bp(narrow) {
+  		left: auto;
+  	  right: 0;
+		}
+ 		ul {
+			margin: 0;
+			li {
+				margin: 0 0 0 15px;
+				display: inline-block;
+				font-size: $font-size-medium;
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Search block
+========================================================================== 
+*/
+
+#block-search-form {
+	position: relative;
+	margin: 1.5em 0 0.5em;
+	@include bp(narrow) {
+  	margin: 0;
+	}
+	form {
+		margin: 0;
+		padding: 0;
+	}
+	input[type=text] {
+		padding-right: 3em;
+		width: 100%;
+		@include bp(narrow) {
+  	  width: 20em;	
+		}
+		
+	}
+	input[type=submit] {
+		display: none;
+	}
+	button[type=submit] {
+		background: none;
+		border: none;
+		cursor: pointer;
+		margin: 0;
+		padding: 0;
+		font-size: 1.5em;
+		position: absolute;
+		top: 0.45em;
+		right: 0.75em;
+	}
+	.form-type-select {
+		display: none;
+	}
+}
+
+#block-search-form {
+	//display: none;
+}
+
+/*
+========================================================================== 
+	Utility links
+========================================================================== 
+*/
+
+#block-commons-utility-links-commons-utility-links {
+	line-height: 1.6em;
+	ul.commons-utility-links {
+  	float: left;
+  	padding-top: 10px;
+  	@include bp(narrow) {
+    	padding-top: 0;
+  	}
+		li {
+			float: left;
+
+			padding: 0 10px 0 10px;
+			border-left: 1px solid $color-gray;
+			line-height: 1em;
+
+			a {
+				color: $text-color-std;
+				text-decoration: none;
+			}
+		}
+		li.last {
+			padding: 0 0 0 10px;
+		}
+		li.first {
+			padding: 0 10px 0 0;
+			border-left: 0;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Community stats - frontpage
+========================================================================== 
+*/
+
+.block-community-stats {
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	color: $color-gray;
+	.block-title {
+		font-size: $font-size-large;
+		text-transform: uppercase;
+		border-bottom: 1px solid #d6d5d4;
+		padding-bottom: 10px;
+		margin-bottom: 30px;
+	}
+	.content {
+		.subtitle {
+			font-weight: bold;
+			font-size: 2.15em;
+			line-height: 1.1em;
+			margin-bottom: 25px;
+		}
+		.stats-top {
+			font-size: 1.38em;
+			margin-bottom: 10px;
+		}
+		.stats {
+			margin-bottom: 10px;
+			overflow: hidden;
+			text-align: center;
+			> div {
+				display: inline-block;
+				font-size: $font-size-large;
+				font-weight: bold;
+				margin: 0 15px;
+				span[class^="icon-"] {
+					font-size: 2em;
+					line-height: 2em;
+					margin: 0 5px 0 0;
+					vertical-align: middle;
+				}
+				span[class^="icon-"].icon-gruppe {
+					font-size: 2.6em;
+					line-height: 2.6em;
+				}
+			}
+		}
+		.stats-link {
+			margin-bottom: 15px;
+			a {
+				@include button-link();
+			}
+		}
+		.stats-btm {
+			color: #6c6c6c;
+			font-style: italic;
+			font-size: $font-size-medium;
+			strong {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+.pane-community-stats {
+	padding: 25px 30px 0;
+	@include box-std();
+	.pane-title {
+		border: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		line-height: 1.15em;
+	}
+	.pane-content {
+		.stats {
+			overflow: hidden;
+			text-align: center;
+			> div {
+				display: inline-block;
+				font-size: $font-size-large;
+				font-weight: bold;
+				margin: 0 15px;
+				span[class^="icon-"] {
+					font-size: 2em;
+					line-height: 2em;
+					margin: 0 5px 0 0;
+					vertical-align: middle;
+				}
+				span[class^="icon-"].icon-gruppe {
+					font-size: 2.6em;
+					line-height: 2.6em;
+				}
+			}
+		}		
+	}
+}
+.grid-4 {
+	.pane-community-stats {
+		padding: 25px 30px;
+		.pane-title {
+			text-align: left;
+			margin-bottom: 10px;
+		}
+		.pane-content {
+			.stats {
+				overflow: hidden;
+				text-align: center;
+				> div {
+					display: inline-block;
+					width: 31%;
+					margin: 0 1%;
+					text-align: center;
+					span[class^="icon-"] {
+						margin: 0;
+						display: block;
+					}
+					span[class^="icon-"].icon-gruppe {
+						line-height: 1.5em;
+					}
+					span.num {
+						display: block;
+					}
+				}
+			}		
+		}
+	}	
+}
+
+/*
+========================================================================== 
+	Banner - frontpage
+========================================================================== 
+*/
+
+.block-frontpage-banner {
+	color: white;
+	padding: 25px 15px;
+	.block-title {
+		font-size: 2em;
+		line-height: 1em;
+		margin-bottom: 20px;
+		font-weight: normal;
+		position: relative;
+		z-index: 2;
+		@include text-shadow(rgba(0,0,0,0.5) 1px 1px 2px);
+	}
+	.subtitle {
+		font-style: italic;
+		margin-bottom: 25px;
+		font-size: 1.25em;
+		position: relative;
+		z-index: 2;
+		@include text-shadow(rgba(0,0,0,0.5) 1px 1px 2px);
+	}
+	.banner-link {
+		float: left;
+		position: relative;
+		z-index: 2;
+		a {
+			@include button-link();
+		}	
+	}
+	.banner-register {
+		float: left;
+		width: 100px;
+		font-size: $font-size-std;
+		line-height: 1.5em;
+		position: relative;
+		z-index: 2;
+		margin: 0 0 0 15px;
+		padding: 0 0 0 15px;
+		border-left: 1px solid white;
+		a {
+			text-decoration: none;
+			font-weight: bold;
+		}
+	}
+	img {
+		position: absolute;
+		top: 0;
+		z-index: 1;
+		max-width: none;
+		width: 1920px;
+		height: 240px;
+		left: 50%;
+		margin-left: -960px;
+	}
+}
+
+/*
+========================================================================== 
+	Events
+========================================================================== 
+*/
+
+.pane-commons-events-upcoming-panel-pane-1,
+.pane-commons-events-upcoming,
+.view-commons-events-user-upcoming-events {
+	.views-row {
+		padding: 12px 0;
+		border-bottom: 1px solid $color-gray-lightest;
+		overflow: hidden;
+		.views-field-field-date {
+			color: $color-gray-light;
+		}
+		.views-field-title {
+			margin: 8px 0 10px;
+			font-size: $font-size-medium;
+			line-height: 2.1em;
+			padding: 0 0 0 2.4em;
+			position: relative;
+			span {
+				vertical-align: middle;
+				line-height: 1.2em;
+				display: inline-block;
+				a {
+					color: $text-color-std;
+					text-decoration: none;
+				}
+			}
+		}
+		.views-field-title:before {
+			@include icon-prepare();
+			content: "\e600";
+			font-size: 2.1em;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.views-field-capacity-used {
+			float: left;
+			width: 50%;
+			color: $color-gray-light;
+			text-align: left;
+			span:before {
+				@include icon-prepare();
+				content: "\e611";
+				margin: 0 3px 0 0;
+			}
+		}
+		.views-field-comment-count {
+			float: right;
+			width: 50%;
+			color: $color-gray-light;
+			text-align: right;
+			span {
+				position: relative;
+				padding-left: 1.65em;
+			}
+			span:before {
+				@include icon-prepare();
+				content: "\e602";
+				font-size: 1.4em;
+				position: absolute;
+				top: -1px;
+				left: 0;
+			}
+		}
+	}
+	.views-row-first {
+		padding-top: 0;
+	}
+	.views-row-last {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+/*
+========================================================================== 
+	Tool Tips
+========================================================================== 
+*/
+.tipsy {
+	font-size: 12px;
+}
+.tipsy-inner {
+	padding: 8px 10px;
+}

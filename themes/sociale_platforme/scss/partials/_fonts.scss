@@ -1,0 +1,121 @@
+/*
+========================================================================== 
+	Social Icon Font
+========================================================================== 
+*/
+@font-face {
+	font-family: 'social';
+	src:url('../fonts/social.eot?-xsvao3');
+	src:url('../fonts/social.eot?#iefix-xsvao3') format('embedded-opentype'),
+		url('../fonts/social.woff?-xsvao3') format('woff'),
+		url('../fonts/social.ttf?-xsvao3') format('truetype'),
+		url('../fonts/social.svg?-xsvao3#social') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin icon-prepare() {
+	font-family: 'social';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	@include icon-prepare();
+}
+
+.icon-menu:before {
+	content: "\e616";
+}
+.icon-tags:before {
+	content: "\e615";
+}
+.icon-calendar:before {
+	content: "\e600";
+}
+.icon-search:before {
+	content: "\e601";
+}
+.icon-comments:before {
+	content: "\e602";
+}
+.icon-message:before {
+	content: "\e603";
+}
+.icon-settings:before {
+	content: "\e604";
+}
+.icon-home:before {
+	content: "\e605";
+}
+.icon-warning:before {
+	content: "\e606";
+}
+.icon-arrow-right:before {
+	content: "\e607";
+}
+.icon-tip:before {
+	content: "\e608";
+}
+.icon-synes-godt-om:before {
+	content: "\e609";
+}
+.icon-opret-indhold:before {
+	content: "\e60a";
+}
+.icon-listevisning:before {
+	content: "\e60b";
+}
+.icon-indlaeg:before {
+	content: "\e60c";
+}
+.icon-gittervisning:before {
+	content: "\e60d";
+}
+.icon-foelg:before {
+	content: "\e60e";
+}
+.icon-afstemning:before {
+	content: "\e60f";
+}
+.icon-gruppe:before {
+	content: "\e610";
+}
+.icon-bruger:before {
+	content: "\e611";
+}
+.icon-foelger:before {
+	content: "\e612";
+}
+.icon-galleri:before {
+	content: "\e613";
+}
+.icon-user-add:before {
+	content: "\e614";
+}
+
+/*
+========================================================================== 
+	Node type icons
+========================================================================== 
+*/
+.icon-post:before {
+	content: "\e60c";
+}
+.icon-poll:before {
+	content: "\e60f";
+}
+.icon-event:before {
+	content: "\e600";
+}
+.icon-gallery:before {
+	content: "\e613";
+}

@@ -1,0 +1,5 @@
+name = Social Miscellaneous
+description = Miscellaneous settings
+core = 7.x
+package = Social Platforms - Custom modules
+project = social_misc

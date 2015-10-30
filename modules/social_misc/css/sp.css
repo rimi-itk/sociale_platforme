@@ -1,0 +1,13 @@
+/* Navbar */
+#navbar-administration .icon-help,
+#navbar-administration #navbar-link-admin-config {
+	display: none;
+}
+
+/* Theme Settings */
+#edit-rescan-breakpoints,
+#edit-omega-tools-reset,
+#edit-omega-tools-export,
+#edit-omega-tools-download {
+	display: none;
+}

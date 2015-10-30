@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP Site Homepage feature.
+ */
+
+include_once 'sp_site_homepage.features.inc';

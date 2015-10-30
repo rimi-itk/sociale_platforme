@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * @file
+ * social_user_search.module
+ */
+
+/**
+ * Implements hook_search_info().
+ *
+ * @see hook_search_info()
+ */
+function social_user_search_search_info() {
+  return array(
+    'path' => 'people',
+    'title' => 'People',
+  );
+}
+
+/**
+ * Implements hook_search_execute().
+ *
+ * @see hook_search_execute()
+ */
+function social_user_search_search_execute($keys = NULL, $conditions = NULL) {
+
+  $find = array();
+  // Replace wildcards with MySQL/PostgreSQL wildcards.
+  $keys = preg_replace('!\*+!', '%', $keys);
+  $query = db_select('users', 'u')->extend('PagerDefault');
+  $query->distinct();
+  $query->fields('u', array('uid'));
+
+  // Additional tables.
+  $query->join('field_data_field_name_first', 'fn', 'fn.entity_id = u.uid');
+  $query->join('field_data_field_name_last', 'ln', 'ln.entity_id = u.uid');
+  $query->join('field_data_field_display_name', 'dn', 'dn.entity_id = u.uid');
+
+  $query->fields('u', array('mail'));
+  $query->condition(
+    db_or()
+      ->condition('u.name', '%' . db_like($keys) . '%', 'LIKE')
+      ->condition('u.mail', '%' . db_like($keys) . '%', 'LIKE')
+      // Additional fields.
+      ->condition('field_name_first_value', '%' . db_like($keys) . '%', 'LIKE')
+      ->condition('field_name_last_value', '%' . db_like($keys) . '%', 'LIKE')
+      ->condition('field_display_name_value', '%' . db_like($keys) . '%', 'LIKE')
+  );
+
+  $uids = $query->limit(15)->execute()->fetchCol();
+  $accounts = user_load_multiple($uids);
+
+  $results = array();
+  foreach ($accounts as $account) {
+    $result = array(
+      'title' => format_username($account),
+      'link' => url('user/' . $account->uid, array('absolute' => TRUE)),
+    );
+    if (user_access('administer users')) {
+      $result['title'] .= ' (' . $account->mail . ')';
+    }
+    $results[] = $result;
+  }
+
+  return $results;
+}

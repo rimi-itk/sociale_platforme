@@ -1,0 +1,163 @@
+<?php
+
+/**
+ * @file
+ * social_misc.module
+ */
+
+require_once DRUPAL_ROOT . '/profiles/commons/commons.profile';
+
+/**
+ * Custom permissions to administer Sociale Platforme.
+ *
+ * Implements hook_permission().
+ */
+function social_misc_permission() {
+  return array(
+    'administer sp' => array(
+      'title' => t('Administer Sociale Platforme'),
+      'description' => t('Perform administration tasks for Sociale Platforme.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_init().
+ */
+function social_misc_init() {
+  global $user;
+
+  // Hides unnecessary elements from the admin UI.
+  if (in_array('configurator', $user->roles)) {
+    drupal_add_css(drupal_get_path('module', 'social_misc') . '/css/sp.css', array('group' => CSS_DEFAULT, 'every_page' => TRUE));
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function social_misc_form_system_theme_settings_alter(&$form, &$form_state, $form_id) {
+
+  // Hide unused submit buttons on theme settings form.
+  $form['actions']['rescan_breakpoints']['#access'] = FALSE;
+  $form['actions']['omega_tools_reset']['#access'] = FALSE;
+  $form['actions']['omega_tools_export']['#access'] = FALSE;
+  $form['actions']['omega_tools_download']['#access'] = FALSE;
+
+  $themes_list = list_themes(TRUE);
+
+  // Filter down to just the social theme:
+  // If social theme exists
+  // If social is enabled
+  // If we're not on the general settings tab -- because args aren't set yet
+  // And we're on the commons_origin settings page, then show the color palette.
+  if (isset($themes_list['social'])
+    && $themes_list['social']->status == 1
+    && !empty($form_state['build_info']['args'])
+    && $form_state['build_info']['args'][0] == 'social') {
+    // Add the color palette selection form to the apperance settings form.
+    require_once drupal_get_path('theme', 'social') . '/social.palettes.inc';
+    social_palettes_form($form);
+  }
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function social_misc_menu_alter(&$items) {
+  $items['admin/appearance/settings/sociale_platforme']['access callback'] = 'social_misc_theme_access';
+}
+
+/**
+ * Custom access callback for theme settings.
+ */
+function social_misc_theme_access() {
+  if (user_access('administer sp')) {
+    return TRUE;
+  }
+  else {
+    return FALSE;
+  }
+}
+
+/**
+ * Remove node partial forms from browsing widgets.
+ *
+ * Implements hook_views_default_views_alter().
+ */
+function social_misc_views_default_views_alter(&$views) {
+  if (!empty($views['commons_bw_all'])) {
+    $views['commons_bw_all']->display['default']->display_options['header'] = "";
+  }
+  if (!empty($views['commons_bw_posts'])) {
+    $views['commons_bw_posts']->display['default']->display_options['header'] = "";
+  }
+  if (!empty($views['commons_bw_polls'])) {
+    $views['commons_bw_polls']->display['default']->display_options['header'] = "";
+  }
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function social_misc_node_access($node, $op, $account) {
+
+  $type = is_string($node) ? $node : $node->type;
+
+  if (in_array($type, node_permissions_get_configured_types())) {
+    if ($op == 'create' && user_access('create ' . $type . ' content', $account)) {
+      return NODE_ACCESS_ALLOW;
+    }
+
+    if ($op == 'update') {
+      if (user_access('edit any ' . $type . ' content', $account) || (user_access('edit own ' . $type . ' content', $account) && ($account->uid == $node->uid))) {
+        return NODE_ACCESS_ALLOW;
+      }
+    }
+
+    if ($op == 'delete') {
+      if (user_access('delete any ' . $type . ' content', $account) || (user_access('delete own ' . $type . ' content', $account) && ($account->uid == $node->uid))) {
+        return NODE_ACCESS_ALLOW;
+      }
+    }
+  }
+  return NODE_ACCESS_IGNORE;
+}
+
+/**
+ * Implements hook_ctools_content_subtype_alter().
+ */
+function social_misc_ctools_content_subtype_alter(&$subtype, $plugin) {
+  $subtype['create content access'] = 'social_misc_pane_access_callback';
+}
+
+/**
+ * Access callback for panels subtypes.
+ *
+ * Used to filter out all redundant panel panes for site configurators.
+ */
+function social_misc_pane_access_callback($plugin, $subtype) {
+
+  $pane_label = $subtype['title'];
+  $pane_name = (isset($subtype['name']) ? $subtype['name'] : "sovs");
+
+  $category_label  = (is_string($subtype['category'])) ? $subtype['category'] : $subtype['category'][0];
+
+  // Allowed categories.
+  $categories_allowed = array(
+    'Sociale Platforme',
+    'Sociale Platforme - Blokke',
+  );
+
+  if (user_access('bypass panels pane access')) {
+    return TRUE;
+  }
+
+  if (in_array($category_label, $categories_allowed)) {
+    return TRUE;
+  }
+
+  if ($pane_name == "custom" || $pane_name == "logolist") {
+    return TRUE;
+  }
+}

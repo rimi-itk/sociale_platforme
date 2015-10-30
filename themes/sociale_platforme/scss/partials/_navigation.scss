@@ -1,0 +1,160 @@
+#region-branding {
+  @extend %clearfix;
+}
+
+.branding-data {
+	body.logged-in & {
+  	width: 66%;
+    float: left;
+    min-width: 200px;
+	}
+}
+#block-mobile-menu-toggle-mobile-menu-toggle {
+	display: inline-block;
+	float: right;
+	font-size: 2.5em;
+	height: 70px;
+	line-height: 70px;
+	a {
+		line-height: 1em;
+		vertical-align: middle;
+		text-decoration: none;
+	}
+}
+
+/*
+========================================================================== 
+	Main Menu
+========================================================================== 
+*/
+.block-main-menu {
+	display: none;
+}
+#zone-menu {
+	ul.menu,
+	ul.main-menu {
+		li {
+			margin: 0;
+			a {
+				margin: 0;
+				padding: 10px 15px;
+				text-decoration: none;
+				color: $color-gray;
+				display: block;
+				border-top: 1px solid #eee;
+				font-size: $font-size-medium;
+			}
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Secondary menu
+========================================================================== 
+*/
+#zone-footer {
+	ul.menu {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			display: inline-block;
+			margin: 0 15px 0 0;
+			padding: 0 15px 0 0;
+			border-right: 1px solid #5f5f5f;
+			a {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+		}
+		li.last {
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+/*
+========================================================================== 
+	Breadcrumb
+========================================================================== 
+*/
+#breadcrumb {
+	margin-bottom: 23px;
+	line-height: $line-height-std;
+	.breadcrumb {
+		margin-bottom: 0;
+	}
+	a {
+		color: $text-color-std;
+		text-decoration: none;
+		line-height: 1em;
+	}
+	span {
+		position: relative;
+		top: 1px;
+	}
+}
+
+/*
+========================================================================== 
+	Tabs
+========================================================================== 
+*/
+
+.quicktabs-style-commons-pills {
+	ul.quicktabs-tabs {
+		margin: 0;
+		li {
+			margin: 0 10px 10px 0;
+			a {
+				color: white;	
+				font-size: 13px;
+				line-height: 13px;
+				padding: 8px 15px 5px;
+				text-decoration: none;
+				@include border-radius(1em);
+				@include background-image(linear-gradient(#a2a2a2, #838383));
+				@include box-shadow(0 2px 0 0 #6c6c6b);
+				span {
+					color: white;
+					font-size: $font-size-std;
+					margin: 0 0 0 8px;
+					padding: 0 0 0 8px;
+					border-left: 1px solid #808080;
+				}
+			}
+			a:before {
+				display: none !important;
+			}
+		}
+		li.active {
+			a:after {
+				display: none;
+			}
+		}
+	}
+}
+
+ul.tabs {
+	margin: 0 0 30px 0;
+	li {
+		display: inline-block;
+		padding: 0;
+		margin: 0 10px 10px 0;
+		a {
+			color: white;	
+			font-size: 13px;
+			line-height: 13px;
+			padding: 8px 15px 5px;
+			text-decoration: none;
+			display: inline-block;
+			@include border-radius(1em);
+			@include background-image(linear-gradient(#a2a2a2, #838383));
+			@include box-shadow(0 2px 0 0 #6c6c6b);			
+		}
+	}
+}

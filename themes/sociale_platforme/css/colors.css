@@ -1,0 +1,397 @@
+/* Base */
+/* Compass */
+/* Modules */
+/*
+========================================================================== 
+	Colors
+========================================================================== 
+*/
+/* Theme colors */
+/* Standard colors */
+/*
+========================================================================== 
+	Element Colors
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Fonts and Text
+========================================================================== 
+*/
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+/*
+========================================================================== 
+	Buttons
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Boxes
+========================================================================== 
+*/
+/*
+========================================================================== 
+	Breakpoints
+========================================================================== 
+*/
+/*
+========================================================================== 
+	General
+========================================================================== 
+*/
+/* line 10, ../scss/colors.scss */
+body {
+  background: #e8e8e3;
+}
+
+/* line 13, ../scss/colors.scss */
+#section-header {
+  border-bottom: 1px solid #e8e8e3;
+}
+
+/* Buttons */
+/* line 19, ../scss/colors.scss */
+form #edit-submit,
+form #edit-vote,
+form input[id^='edit-vote--'],
+form input[id^='edit-submit--'],
+form input[type=button] {
+  background: #8cb385;
+  border-bottom: 2px solid #5e7f58;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+}
+/* line 28, ../scss/colors.scss */
+form #edit-cancel {
+  color: #8cb385;
+}
+
+/* line 32, ../scss/colors.scss */
+a.btn {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  border-bottom: 2px solid #5e7f58;
+}
+
+/* line 36, ../scss/colors.scss */
+a.btn-link {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  border-bottom: 2px solid #5e7f58;
+}
+
+/* Content create buttons */
+/* line 45, ../scss/colors.scss */
+.pane-node-create-links ul li a {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  border-bottom: 2px solid #5e7f58;
+}
+
+/* Content Links */
+/* line 55, ../scss/colors.scss */
+#zone-user a {
+  color: #8cb385;
+}
+
+/* line 60, ../scss/colors.scss */
+#zone-footer a {
+  color: #8cb385;
+}
+
+/* line 65, ../scss/colors.scss */
+.more-link a {
+  color: #8cb385;
+}
+
+/* Icons */
+/* line 72, ../scss/colors.scss */
+#block-search-form button[type=submit] {
+  color: #8cb385;
+}
+
+/* Flags */
+/* line 80, ../scss/colors.scss */
+.follow .flag-commons-follow-group a {
+  border-bottom: 2px solid #5e7f58;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+}
+
+/*
+========================================================================== 
+	Nodes
+========================================================================== 
+*/
+/* line 94, ../scss/colors.scss */
+.node .content .field a {
+  color: #8cb385;
+}
+/* line 99, ../scss/colors.scss */
+.node .author a {
+  color: #8cb385;
+}
+/* line 104, ../scss/colors.scss */
+.node nav.links a {
+  color: #8cb385;
+}
+
+/* Group Pane */
+/* line 113, ../scss/colors.scss */
+.node-group .content .field .action-item-primary {
+  color: white;
+  border-bottom: 2px solid #5e7f58;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+}
+
+/* line 122, ../scss/colors.scss */
+.group-reference a {
+  color: #8cb385;
+}
+
+/*
+========================================================================== 
+	Comments
+========================================================================== 
+*/
+/* line 134, ../scss/colors.scss */
+article.comment .comment-title a {
+  color: #8cb385;
+}
+
+/*
+========================================================================== 
+	Views
+========================================================================== 
+*/
+/* line 147, ../scss/colors.scss */
+.view .view-filters a {
+  color: #8cb385;
+}
+/* line 156, ../scss/colors.scss */
+.view .views-row .content a,
+.view .views-row .created a,
+.view .views-row .submitted a {
+  color: #8cb385;
+}
+/* line 162, ../scss/colors.scss */
+.view .views-field-field-group-tags a {
+  color: #8cb385;
+}
+
+/* line 169, ../scss/colors.scss */
+#quicktabs-groups_directory ul.quicktabs-tabs li.active a:before {
+  color: #8cb385;
+}
+
+/*
+========================================================================== 
+	Search
+========================================================================== 
+*/
+/* line 180, ../scss/colors.scss */
+.page-search .search-info a {
+  color: #8cb385;
+}
+/* line 184, ../scss/colors.scss */
+.page-search .panel-right .panel-pane a {
+  color: #8cb385;
+}
+
+/*
+========================================================================== 
+	Blocks
+========================================================================== 
+*/
+/* line 196, ../scss/colors.scss */
+.profile-msg h3 {
+  background: #8cb385;
+}
+/* line 199, ../scss/colors.scss */
+.profile-msg span[class^="icon-"] {
+  color: #8cb385;
+}
+
+/* line 206, ../scss/colors.scss */
+.block-community-stats .content .subtitle {
+  color: #8cb385;
+}
+/* line 211, ../scss/colors.scss */
+.block-community-stats .content .stats > div span {
+  color: #8cb385;
+}
+
+/* line 220, ../scss/colors.scss */
+.pane-community-stats span[class^="icon-"] {
+  color: #8cb385;
+}
+
+/* line 227, ../scss/colors.scss */
+.block-frontpage-banner .banner-register a {
+  color: #8cb385;
+}
+
+/* line 234, ../scss/colors.scss */
+.pane-quick-tip .pane-title {
+  color: #8cb385;
+}
+/* line 237, ../scss/colors.scss */
+.pane-quick-tip a {
+  color: #8cb385;
+}
+
+/* line 246, ../scss/colors.scss */
+.grid-4 .pane-node-content .pane-content .follow-counter span.icon-bruger {
+  color: #8cb385;
+}
+/* line 251, ../scss/colors.scss */
+.grid-4 .pane-node-content .pane-content .follow a {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  border-bottom: 2px solid #5e7f58;
+}
+
+/*
+========================================================================== 
+	Navigation
+========================================================================== 
+*/
+/* Main Menu */
+/* line 271, ../scss/colors.scss */
+#zone-menu ul.menu li a.active,
+#zone-menu ul.main-menu li a.active {
+  color: #8cb385;
+}
+
+/* Tabs */
+/* line 281, ../scss/colors.scss */
+.quicktabs-style-commons-pills ul.quicktabs-tabs li.active {
+  margin-bottom: 10px;
+}
+/* line 283, ../scss/colors.scss */
+.quicktabs-style-commons-pills ul.quicktabs-tabs li.active a {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  -moz-box-shadow: 0 2px 0 0 #5e7f58;
+  -webkit-box-shadow: 0 2px 0 0 #5e7f58;
+  box-shadow: 0 2px 0 0 #5e7f58;
+}
+/* line 286, ../scss/colors.scss */
+.quicktabs-style-commons-pills ul.quicktabs-tabs li.active a span {
+  border-left: 1px solid #5e7f58;
+}
+
+/* line 295, ../scss/colors.scss */
+ul.tabs li a.active {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzkwYjg4OSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzc4OWE3MiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #90b889), color-stop(100%, #789a72));
+  background-image: -moz-linear-gradient(#90b889, #789a72);
+  background-image: -webkit-linear-gradient(#90b889, #789a72);
+  background-image: linear-gradient(#90b889, #789a72);
+  -moz-box-shadow: 0 2px 0 0 #5e7f58;
+  -webkit-box-shadow: 0 2px 0 0 #5e7f58;
+  box-shadow: 0 2px 0 0 #5e7f58;
+}
+
+/* Pagers */
+/* line 305, ../scss/colors.scss */
+ul.pager li a {
+  color: #8cb385;
+}
+
+/* Polls */
+/* line 314, ../scss/colors.scss */
+.node-poll .poll .foreground {
+  background: #8cb385;
+}
+
+/* Quicktabs profile */
+/* line 323, ../scss/colors.scss */
+#quicktabs-commons_follow_ui a,
+#quicktabs-commons_trusted_contacts a {
+  color: #8cb385;
+}
+/* line 330, ../scss/colors.scss */
+#quicktabs-commons_follow_ui .flag-commons-follow-group a,
+#quicktabs-commons_follow_ui .flag-commons-follow-user a,
+#quicktabs-commons_follow_ui .flag-commons-follow-node a,
+#quicktabs-commons_follow_ui .flag-commons-follow-topic a,
+#quicktabs-commons_trusted_contacts .flag-commons-follow-group a,
+#quicktabs-commons_trusted_contacts .flag-commons-follow-user a,
+#quicktabs-commons_trusted_contacts .flag-commons-follow-node a,
+#quicktabs-commons_trusted_contacts .flag-commons-follow-topic a {
+  color: white;
+}
+
+/*
+========================================================================== 
+	Forms and Admin pages
+========================================================================== 
+*/
+/* line 346, ../scss/colors.scss */
+.node-form a,
+.comment-form a,
+#user-profile-form a,
+#user-register-form a,
+#edit-profile-user-profile-form a {
+  color: #8cb385;
+}
+
+/* line 352, ../scss/colors.scss */
+.view-og-members-admin a {
+  color: #8cb385;
+}
+
+/* line 358, ../scss/colors.scss */
+dl.admin-list a {
+  color: #8cb385;
+}
+
+/*
+========================================================================== 
+	Profile tabs
+========================================================================== 
+*/
+/* line 369, ../scss/colors.scss */
+#privatemsg-list a {
+  color: #8cb385;
+}
+
+/* line 374, ../scss/colors.scss */
+.privatemsg-conversation a {
+  color: #8cb385;
+}

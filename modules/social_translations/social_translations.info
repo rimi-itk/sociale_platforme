@@ -1,0 +1,7 @@
+name = Social Platforms translations
+description = This module make sure everything not translatable become translatable.
+core = 7.x
+package = Social Platforms - Custom modules
+project = social_translations
+dependencies[] = commons_follow
+files[] = social_translations.module

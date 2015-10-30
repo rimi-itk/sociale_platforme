@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP Groups feature.
+ */
+
+include_once 'sp_groups.features.inc';

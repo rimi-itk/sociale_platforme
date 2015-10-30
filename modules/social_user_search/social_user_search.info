@@ -1,0 +1,4 @@
+name = Social User Search
+description = Implements a new user search page
+core = 7.x
+package = Social Platforms - Custom modules

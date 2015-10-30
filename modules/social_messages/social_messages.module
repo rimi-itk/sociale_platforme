@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * social_messages.module
+ */
+
+/**
+ * Implements hook_menu().
+ *
+ * A workaround to get a message tab displayed on user pages.
+ */
+function social_messages_menu() {
+  $items = array();
+
+  $items['user/%/private_messages'] = array(
+    'title'             => 'Messages',
+    'page callback'     => '_social_messages_goto',
+    // Permission reused from Private Msg module.
+    'access arguments'  => array('read privatemsg'),
+    // Load external file for reusage.
+    'file'              => 'privatemsg.pages.inc',
+    // Get path the external module.
+    'file path'         => drupal_get_path('module', 'privatemsg'),
+    // This is a tab.
+    'type'              => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+/**
+ * Loads user object, build formular and returns it.
+ * privatemsg_list is reused from Private Msg module.
+ */
+function _social_messages_goto() {
+
+  global $user;
+  return drupal_get_form('privatemsg_list', 'list', $user);
+}

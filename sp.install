@@ -1,0 +1,262 @@
+<?php
+
+/**
+ * @file
+ */
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function sp_install() {
+
+  // Set base profile.
+  variable_set('install_profile', 'sp');
+  variable_set('install_base_profile', 'commons');
+
+  // Theme handling.
+  $default_theme = 'sociale_platforme';
+  $admin_theme = 'seven';
+
+  // Disable all themes.
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->execute();
+  // Enable $default_theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', $default_theme)
+    ->execute();
+  // Enable $admin_theme.
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', $admin_theme)
+    ->execute();
+  variable_set('theme_default', $default_theme);
+  variable_set('admin_theme', $admin_theme);
+  // Activate admin theme when editing a node.
+  variable_set('node_admin_theme', '1');
+
+  // Block Handling.
+  $blocks = array(
+      // Default theme.
+    array(
+      'module' => 'system',
+      'delta' => 'main',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => -10,
+      'region' => 'content',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'main-menu',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => -0,
+      'region' => 'menu',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'user',
+      'delta' => 'login',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'user',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'search',
+      'delta' => 'form',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 1,
+      'region' => 'user',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'commons_utility_links',
+      'delta' => 'commons_utility_links',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 2,
+      'region' => 'user',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'social_blocks',
+      'delta' => 'frontpage_banner',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => -9,
+      'region' => 'header',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => '<front>',
+      'cache' => -1,
+      'title' => variable_get('site_name', 'Sociale Platforme'),
+    ),
+    array(
+      'module' => 'social_blocks',
+      'delta' => 'community_stats',
+      'theme' => $default_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'postscript',
+      'visibility' => BLOCK_VISIBILITY_LISTED,
+      'pages' => '<front>',
+      'cache' => -1,
+      'title' => variable_get('site_name', 'Bliv en del af et aktivt fællesskab'),
+    ),
+    // Administration theme.
+    array(
+      'module' => 'system',
+      'delta' => 'main',
+      'theme' => $admin_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'content',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'help',
+      'theme' => $admin_theme,
+      'status' => 1,
+      'weight' => 0,
+      'region' => 'help',
+      'visibility' => 0,
+      'pages' => '',
+      'cache' => -1,
+      'title' => '',
+    ),
+  );
+
+  db_delete('block')->condition('module', 'commons_utility_links')->execute();
+  db_delete('block')->condition('module', 'social_blocks')->execute();
+  db_delete('block')->condition('module', 'system')->execute();
+  db_delete('block')->condition('module', 'search')->execute();
+  db_delete('block')->condition('module', 'user')->execute();
+  // Add in our blocks defined above.
+  $query = db_insert('block')->fields(array('module', 'delta', 'theme', 'status', 'weight', 'region', 'visibility', 'pages', 'cache', 'title'));
+  foreach ($blocks as $block) {
+    $query->values($block);
+  }
+  $query->execute();
+
+  // Block visibility by role.
+  $blocks_by_role = array(
+    array(
+      'module' => 'search',
+      'delta' => 'form',
+      'rid' => 2,
+    ),
+    array(
+      'module' => 'system',
+      'delta' => 'main-menu',
+      'rid' => 2,
+    ),
+    array(
+      'module' => 'commons_utility_links',
+      'delta' => 'commons_utility_links',
+      'rid' => 2,
+    ),
+    array(
+      'module' => 'social_blocks',
+      'delta' => 'community_stats',
+      'rid' => 1,
+    ),
+  );
+  db_delete('block_role')->execute();
+  $query = db_insert('block_role')->fields(array('module', 'delta', 'rid'));
+  foreach ($blocks_by_role as $block_by_role) {
+    $query->values($block_by_role);
+  }
+  $query->execute();
+
+  // Custom footer block.
+  $footer_body = '<p>Copyright ' . date("Y") . ' -  ' . variable_get('site_name', 'Sociale Platforme') . '</p>';
+  $footer_block_text = array(
+    'body' => st($footer_body),
+    'info' => st('Footer text'),
+    'format' => 'full_html',
+  );
+
+  if (drupal_write_record('block_custom', $footer_block_text)) {
+    $footer_block = array(
+      'module' => 'block',
+      'delta' => $footer_block_text['bid'],
+      'theme' => $default_theme,
+      'visibility' => 0,
+      'region' => 'footer_first',
+      'status' => 1,
+      'pages' => 0,
+      'weight' => 1,
+      'title' => '',
+    );
+    drupal_write_record('block', $footer_block);
+  }
+
+  // Features Handling.
+  // Disable commons features.
+  $modules_dis = array(
+    'commons_wikis_pages',
+    'commons_wikis',
+    'commons_q_a_pages',
+    'commons_q_a',
+    'commons_activity_page',
+  );
+  module_disable($modules_dis, FALSE);
+
+  // Enable sp features.
+  $modules_en = array(
+    'sp_events_pages',
+    'sp_groups',
+    'sp_group_homepages',
+    'sp_groups_directory',
+    'sp_latest_content',
+    'sp_site_homepage',
+    'sp_user_profile_pages',
+    'sp_search',
+    'sp_profile_extended',
+    'social_gallery',
+    'sp_configuration',
+    'sp_flags',
+    'contextual',
+  );
+  module_enable($modules_en);
+}

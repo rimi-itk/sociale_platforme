@@ -1,0 +1,213 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the normal and widescreen layouts. You may override these styles in the normal
+ *  and widescreen CSS files as appropriate. */
+
+@import "base";
+
+/*
+==========================================================================
+	Zones
+==========================================================================
+*/
+#zone-content-wrapper {
+	padding: 30px 0 0;
+}
+#zone-menu-wrapper {
+	background: white;
+	padding: 12px 0;
+}
+/*
+==========================================================================
+	Views
+==========================================================================
+*/
+
+/* Groups */
+.view-sp-groups.groups-grid {
+  .view-content {
+    @extend %clearfix;
+  }
+	.views-row {
+		
+		
+		.panel-panel.grid-8 &,
+		.panel-panel.grid-12 & {
+  	  float: left;
+  		width: 48%;
+  		margin-right: 4%;	
+  		
+		}
+		
+		.panel-panel.grid-8 & {
+  		&.views-row-even {
+    		margin-right: 0;
+    	}
+		}
+	}
+	
+}
+
+/* Show elements */
+#region-user {
+	display: block;
+}
+
+/* Exposed filters */
+.quicktabs-tabpage,
+.page-events,
+.view-sp-groups  {
+	.view-filters {
+		.views-exposed-widget {
+			margin: 0 10px 0 0;
+			display: inline-block;
+		}
+	}
+}
+
+/* Browsing Widget - Quick Tabs */
+#quicktabs-container-commons_bw {
+	.quicktabs-tabpage {
+		.view {
+			.views-row {
+				article {
+					.author {
+						div.follow {
+							margin: 0;
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+==========================================================================
+	Menus
+==========================================================================
+*/
+.block-main-menu {
+	display: block !important;
+}
+#zone-menu {
+	ul.menu,
+	ul.main-menu {
+		li {
+			list-style: none;
+			float: left;
+			margin: 0;
+			padding: 0;
+			font-size: 1.38em;
+			margin-right: 58px;
+			a {
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+				color: $color-gray;
+				border-top: 0;
+			}
+		}
+	}
+}
+
+#block-mobile-menu-toggle-mobile-menu-toggle {
+	display: none;
+}
+
+/*
+==========================================================================
+	Blocks
+==========================================================================
+*/
+
+/* Branding */
+.branding-data {
+	width: 100%;
+	float: none;
+}
+
+/* User region */
+#region-user {
+	text-align: right;
+	.block {
+		display: block;
+		float: right;
+		margin: 10px 0 0 0;
+	}
+	.block.even {
+		margin: 10px 0 0 0;
+	}
+}
+
+/* Footer region */
+#region-footer-first {
+	text-align: left;
+}
+#region-footer-second {
+	margin-top: 0;
+	text-align: right;
+}
+
+/* Add content pane */
+.panel-panel.grid-12 {
+	.pane-content-add {
+		.pane-title {
+			width: 25%;
+		}
+		.pane-content {
+			width: 75%;
+		}
+		.desc {
+			width: 66%;
+		}
+		.btn-wrapper {
+			width: 33%;
+			.btn-link {
+				margin-top: 0;
+				float: right;
+			}
+		}
+	}
+}
+
+/* Logos */
+.pane-bundle-logolist {
+	.pane-content {
+		.field-item {
+			height: 75px;
+		}
+	}
+}
+
+/* Login block */
+#block-user-login {
+	input[type=text],
+	input[type=password],
+	input[type=email] {
+		min-width: inherit;
+	}
+}
+
+/*
+==========================================================================
+	Frontpage
+==========================================================================
+*/
+
+.front {
+	#zone-content-wrapper {
+		padding: 70px 0 0;
+	}
+}
+
+.block-frontpage-banner {
+	padding: 25px 35px;
+	.block-title {
+		font-size: 3.45em;
+	}
+	.subtitle {
+		font-size: 1.7em;
+	}
+}
