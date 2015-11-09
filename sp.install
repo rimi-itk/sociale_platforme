@@ -77,7 +77,7 @@ function sp_install() {
       'visibility' => 0,
       'pages' => '',
       'cache' => -1,
-      'title' => '',
+      'title' => '<none>',
     ),
     array(
       'module' => 'user',
@@ -89,7 +89,7 @@ function sp_install() {
       'visibility' => 0,
       'pages' => '',
       'cache' => -1,
-      'title' => '',
+      'title' => '<none>',
     ),
     array(
       'module' => 'search',
@@ -125,7 +125,7 @@ function sp_install() {
       'visibility' => BLOCK_VISIBILITY_LISTED,
       'pages' => '<front>',
       'cache' => -1,
-      'title' => variable_get('site_name', 'Sociale Platforme'),
+      'title' => variable_get('site_name', 'Bliv en del af et aktivt online fællesskab'),
     ),
     array(
       'module' => 'social_blocks',
@@ -230,6 +230,24 @@ function sp_install() {
     );
     drupal_write_record('block', $footer_block);
   }
+  
+  // Shortcuts
+  // Add shortcuts to the default set on install.
+  $t = get_t();
+  $shortcut_set = shortcut_set_load(SHORTCUT_DEFAULT_SET_NAME);
+  // Remove the old one.
+  db_delete('menu_links')
+    ->condition('menu_name', 'shortcut-set-1')
+    ->execute();
+
+  $shortcut_set->links = array(
+    array(
+      'link_path' => 'admin/appearance/settings/sociale_platforme',
+      'link_title' => $t('Site settings'),
+      'weight' => -20,
+    ),
+  );
+  shortcut_set_save($shortcut_set);  
 
   // Features Handling.
   // Disable commons features.
@@ -256,6 +274,7 @@ function sp_install() {
     'social_gallery',
     'sp_configuration',
     'sp_flags',
+    'sp_translations',
     'contextual',
   );
   module_enable($modules_en);
