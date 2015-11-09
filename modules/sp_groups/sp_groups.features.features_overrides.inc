@@ -11,7 +11,7 @@ function sp_groups_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: field_base.
+  // Exported overrides for: field_base
   $overrides["field_base.field_group_logo.foreign keys"]["DELETED"] = TRUE;
   $overrides["field_base.field_og_subscribe_settings.field_permissions"] = array(
     'type' => 2,
@@ -39,7 +39,7 @@ function sp_groups_features_override_default_overrides() {
     'type' => 'none',
   );
 
-  // Exported overrides for: field_instance.
+  // Exported overrides for: field_instance
   $overrides["field_instance.node-group-body.display|default|weight"] = 2;
   $overrides["field_instance.node-group-body.label"] = 'Beskrivelse';
   $overrides["field_instance.node-group-field_group_logo.display|default|settings|image_style"] = 'group_grid';
@@ -67,9 +67,9 @@ function sp_groups_features_override_default_overrides() {
   $overrides["field_instance.node-group-title_field.label"] = 'Titel';
   $overrides["field_instance.node-group-title_field.widget|weight"] = 0;
 
-  // Exported overrides for: node.
+  // Exported overrides for: node
   $overrides["node.group.name"] = 'Gruppe';
   $overrides["node.group.title_label"] = 'Navn';
 
-  return $overrides;
+ return $overrides;
 }

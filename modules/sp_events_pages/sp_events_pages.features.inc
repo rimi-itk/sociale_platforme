@@ -41,79 +41,53 @@ function sp_events_pages_default_page_manager_pages_alter(&$data) {
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-80f087dc-fe84-7354-e19b-23e398080db9']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-80f087dc-fe84-7354-e19b-23e398080db9']->position = 3; /* WAS: 4 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-8c211515-77bf-48fd-9fb6-7dacd293bff3'] = (object) array(
-      'pid' => 'new-8c211515-77bf-48fd-9fb6-7dacd293bff3',
-      'panel' => 'footer',
-      'type' => 'community_stats',
-      'subtype' => 'community_stats',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(),
-      'cache' => array(),
-      'style' => array(),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 0,
-      'locks' => array(),
-      'uuid' => '8c211515-77bf-48fd-9fb6-7dacd293bff3',
-    ); /* WAS: '' */
+          'pid' => 'new-8c211515-77bf-48fd-9fb6-7dacd293bff3',
+          'panel' => 'footer',
+          'type' => 'community_stats',
+          'subtype' => 'community_stats',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(),
+          'cache' => array(),
+          'style' => array(),
+          'css' => array(),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => '8c211515-77bf-48fd-9fb6-7dacd293bff3',
+        ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-9118fc7d-3da5-cf54-5152-5d66043812b2']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-9118fc7d-3da5-cf54-5152-5d66043812b2']->position = 1; /* WAS: 2 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d0980eb3-c220-4586-9857-21d16d552094'] = (object) array(
-      'pid' => 'new-d0980eb3-c220-4586-9857-21d16d552094',
-      'panel' => 'header',
-      'type' => 'content_add',
-      'subtype' => 'content_add',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'description' => 'Begivenheder kan for eksempel være planlagte aktiviteter eller møder.',
-        'override_title' => 1,
-        'override_title_text' => 'Opret begivenhed',
-        'types' => NULL,
-        'type' => 'event',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(
-        'css_id' => 'add-event',
-        'css_class' => '',
-      ),
-      'extras' => array(),
-      'position' => 0,
-      'locks' => array(),
-      'uuid' => 'd0980eb3-c220-4586-9857-21d16d552094',
-    ); /* WAS: '' */
+          'pid' => 'new-d0980eb3-c220-4586-9857-21d16d552094',
+          'panel' => 'header',
+          'type' => 'content_add',
+          'subtype' => 'content_add',
+          'shown' => TRUE,
+          'access' => array(),
+          'configuration' => array(
+            'description' => 'Begivenheder kan for eksempel være planlagte aktiviteter eller møder.',
+            'override_title' => 1,
+            'override_title_text' => 'Opret begivenhed',
+            'types' => NULL,
+            'type' => 'event',
+          ),
+          'cache' => array(),
+          'style' => array(
+            'settings' => NULL,
+          ),
+          'css' => array(
+            'css_id' => 'add-event',
+            'css_class' => '',
+          ),
+          'extras' => array(),
+          'position' => 0,
+          'locks' => array(),
+          'uuid' => 'd0980eb3-c220-4586-9857-21d16d552094',
+        ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d776b637-24a9-7e74-712c-8bc27d399c3e']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d776b637-24a9-7e74-712c-8bc27d399c3e']->position = 0; /* WAS: 1 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-e72884a7-369b-1954-2d1f-d69207c4d6ff']->panel = 'left'; /* WAS: 'two_66_33_first' */
-    $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-ea3b62cf-9129-4440-9921-98c9bbe8fabc'] = (object) array(
-      'pid' => 'new-ea3b62cf-9129-4440-9921-98c9bbe8fabc',
-      'panel' => 'right',
-      'type' => 'quick_tip',
-      'subtype' => 'quick_tip',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(
-        'body' => array(
-          'value' => '<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
-              ',
-          'format' => 'full_html',
-        ),
-        'override_title' => 0,
-        'override_title_text' => '',
-      ),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 4,
-      'locks' => array(),
-      'uuid' => 'ea3b62cf-9129-4440-9921-98c9bbe8fabc',
-    ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-ef7caf29-a6a8-e654-5997-6b969eba407a']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-ef7caf29-a6a8-e654-5997-6b969eba407a']->position = 2; /* WAS: 3 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->layout = 'social_12_twocol_eightfour'; /* WAS: 'two_66_33' */
@@ -135,7 +109,6 @@ function sp_events_pages_default_page_manager_pages_alter(&$data) {
       1 => 'new-9118fc7d-3da5-cf54-5152-5d66043812b2',
       2 => 'new-ef7caf29-a6a8-e654-5997-6b969eba407a',
       3 => 'new-80f087dc-fe84-7354-e19b-23e398080db9',
-      4 => 'new-ea3b62cf-9129-4440-9921-98c9bbe8fabc',
     ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->title = 'Begivenheder'; /* WAS: 'Events' */
     $data['views_events_landing_page']->menu['name'] = 'main-menu'; /* WAS: '' */
