@@ -5,26 +5,6 @@
  */
 
 /**
- * Implements hook_install_tasks().
- *
- * As this function is called early and often, we have to maintain a cache or
- * else the task specifying a form may not be available on form submit.
- */
-function sp_install_tasks(&$install_state) {
-  $ret = array(
-    // Update translations.
-    'sp_import_translation' => array(
-      'display_name' => st('Set up translations'),
-      'display' => TRUE,
-      'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
-      'type' => 'batch',
-    ),
-  );
-
-  // Return $ret;.
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  *
  * Select the current install profile by default.
@@ -42,45 +22,31 @@ function sp_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'install_configure_form') {
     // Disable Acquia Connector.
     $form['server_settings']['enable_acquia_connector']['#default_value'] = 0;
+    $form['server_settings']['enable_acquia_connector']['#access'] = FALSE;
+    $form['server_settings']['acquia_connector_modules']['#access'] = FALSE;
+    $form['server_settings']['acquia_description']['#access'] = FALSE;
   }
 }
 
 /**
- * Implements hook_install_tasks_alter().
+ * Implements hook_install_tasks().
  */
-function sp_install_tasks_alter(&$tasks, $install_state) {
-
-  // Unset Commons tasks.
-  $unset_tasks = array(
-    'commons_installer_palette',
-    'commons_anonymous_message_homepage',
-    'commons_create_first_group',
-        // 'install_import_locales',
-        // 'install_import_locales_remaining',.
+function sp_install_tasks(&$install_state) {
+  return array(
+    'sp_import_translation' => array(
+      'display_name' => st('Set up translations'),
+      'display' => TRUE,
+      'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+      'type' => 'batch',
+    ),
   );
-  foreach ($unset_tasks as $unset_task) {
-    unset($tasks[$unset_task]);
-  }
-
-  // Custom callback for language selection.
-  $tasks['install_select_locale']['function'] = 'sp_locale_selection';
 }
 
 /**
- * Set default language to english.
- */
-function sp_locale_selection(&$install_state) {
-  $install_state['parameters']['locale'] = 'en';
-}
-
-/**
- * Translation callback.
+ * Installation step callback.
  *
  * @param $install_state
  *   An array of information about the current installation state.
- *
- * @return array
- *   List of batches.
  */
 function sp_import_translation(&$install_state) {
   // Enable l10n_update.
@@ -101,6 +67,34 @@ function sp_import_translation(&$install_state) {
   $updates = _l10n_update_prepare_updates($updates, NULL, array());
   $batch = l10n_update_batch_multiple($updates, LOCALE_IMPORT_KEEP);
   return $batch;
+}
+
+/**
+ * Implements hook_install_tasks_alter().
+ */
+function sp_install_tasks_alter(&$tasks, $install_state) {
+
+  // Unset Commons tasks.
+  $unset_tasks = array(
+    'commons_installer_palette',
+    'commons_anonymous_message_homepage',
+    'commons_create_first_group',
+  );
+  foreach ($unset_tasks as $unset_task) {
+    unset($tasks[$unset_task]);
+  }
+  
+  // Remove core steps for translation imports.
+  unset($tasks['install_import_locales']);
+  unset($tasks['install_import_locales_remaining']);
+  
+  // Callback for language selection.
+  $tasks['install_select_locale']['function'] = 'sp_locale_selection';
+}
+
+// Set default language to english.
+function sp_locale_selection(&$install_state) {
+  $install_state['parameters']['locale'] = 'en';
 }
 
 /**
