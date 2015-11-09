@@ -17,6 +17,9 @@ dependencies[] = user_stats
 dependencies[] = web_widgets
 dependencies[] = fieldable_panels_panes
 dependencies[] = features_override
+dependencies[] = features_translations
+dependencies[] = content_access
+dependencies[] = color
 > dependencies[] = mobile_menu_toggle
 ; SP - Custom modules
 dependencies[] = social_blocks
