@@ -10,6 +10,11 @@ projects[drupal][patch][] = https://www.drupal.org/files/issues/allow_install_pr
 projects[commons][type] = "profile"
 projects[commons][version] = "3.11"
 
+projects[sp][type] = "profile"
+projects[sp][download][type] = "git"
+projects[sp][download][url] = "https://github.com/createinside/sociale_platforme"
+projects[sp][branch] = "master"
+
 ; +++++ Modules +++++
 
 projects[content_access][version] = "1.2-beta2"
@@ -75,6 +80,9 @@ projects[wysiwyg][subdir] = "contrib"
 projects[features_override][version] = "2.0-rc3"
 projects[features_override][subdir] = "contrib"
 projects[features_override][patch][] = https://www.drupal.org/files/issues/features_override-added-all-missing-functions-2594671.patch
+
+projects[features_translations][version] = "2.0"
+projects[features_translations][subdir] = "contrib"
 
 ; +++++ Themes +++++
 
