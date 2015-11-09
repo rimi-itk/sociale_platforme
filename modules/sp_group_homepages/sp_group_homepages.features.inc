@@ -14,58 +14,58 @@ function sp_group_homepages_panelizer_defaults_override_alter(&$data) {
     $data['node:group:default']->display->content['new-13120946-03a1-bfc4-2d74-f39dd758ebce']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['node:group:default']->display->content['new-13120946-03a1-bfc4-2d74-f39dd758ebce']->position = 2; /* WAS: 0 */
     $data['node:group:default']->display->content['new-559cb8e8-c7b3-4fb9-ac57-60292ab6e351'] = (object) array(
-          'pid' => 'new-559cb8e8-c7b3-4fb9-ac57-60292ab6e351',
-          'panel' => 'left',
-          'type' => 'node_create_links',
-          'subtype' => 'node_create_links',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'types' => array(
-              'event' => 'event',
-              'post' => 'post',
-              'poll' => 'poll',
-              'gallery' => 'gallery',
-            ),
-            'field_name' => 'og_group_ref',
-            'context' => 'panelizer',
-            'override_title' => 1,
-            'override_title_text' => 'Opret indhold',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(),
-          'extras' => array(),
-          'position' => 0,
-          'locks' => array(
-            'type' => 'none',
-            'regions' => array(
-              'left' => 'left',
-            ),
-          ),
-          'uuid' => '559cb8e8-c7b3-4fb9-ac57-60292ab6e351',
-        ); /* WAS: '' */
+      'pid' => 'new-559cb8e8-c7b3-4fb9-ac57-60292ab6e351',
+      'panel' => 'left',
+      'type' => 'node_create_links',
+      'subtype' => 'node_create_links',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'types' => array(
+          'event' => 'event',
+          'post' => 'post',
+          'poll' => 'poll',
+          'gallery' => 'gallery',
+        ),
+        'field_name' => 'og_group_ref',
+        'context' => 'panelizer',
+        'override_title' => 1,
+        'override_title_text' => 'Opret indhold',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(
+        'type' => 'none',
+        'regions' => array(
+          'left' => 'left',
+        ),
+      ),
+      'uuid' => '559cb8e8-c7b3-4fb9-ac57-60292ab6e351',
+    ); /* WAS: '' */
     $data['node:group:default']->display->content['new-80b62348-7cee-e304-5d65-0ce1b6bbb216']->panel = 'left'; /* WAS: 'two_66_33_first' */
     $data['node:group:default']->display->content['new-976c762b-1bf0-40f6-99d9-9ef0f9819380'] = (object) array(
-          'pid' => 'new-976c762b-1bf0-40f6-99d9-9ef0f9819380',
-          'panel' => 'right',
-          'type' => 'views_panes',
-          'subtype' => 'sp_group_followers-panel_pane_1',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(),
-          'extras' => array(),
-          'position' => 1,
-          'locks' => array(),
-          'uuid' => '976c762b-1bf0-40f6-99d9-9ef0f9819380',
-        ); /* WAS: '' */
+      'pid' => 'new-976c762b-1bf0-40f6-99d9-9ef0f9819380',
+      'panel' => 'right',
+      'type' => 'views_panes',
+      'subtype' => 'sp_group_followers-panel_pane_1',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 1,
+      'locks' => array(),
+      'uuid' => '976c762b-1bf0-40f6-99d9-9ef0f9819380',
+    ); /* WAS: '' */
     $data['node:group:default']->display->layout = 'social_12_twocol_eightfour'; /* WAS: 'two_66_33' */
     $data['node:group:default']->display->panel_settings['style_settings']['footer'] = NULL; /* WAS: '' */
     $data['node:group:default']->display->panel_settings['style_settings']['header'] = NULL; /* WAS: '' */

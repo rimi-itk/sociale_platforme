@@ -41,50 +41,50 @@ function sp_events_pages_default_page_manager_pages_alter(&$data) {
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-80f087dc-fe84-7354-e19b-23e398080db9']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-80f087dc-fe84-7354-e19b-23e398080db9']->position = 3; /* WAS: 4 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-8c211515-77bf-48fd-9fb6-7dacd293bff3'] = (object) array(
-          'pid' => 'new-8c211515-77bf-48fd-9fb6-7dacd293bff3',
-          'panel' => 'footer',
-          'type' => 'community_stats',
-          'subtype' => 'community_stats',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(),
-          'cache' => array(),
-          'style' => array(),
-          'css' => array(),
-          'extras' => array(),
-          'position' => 0,
-          'locks' => array(),
-          'uuid' => '8c211515-77bf-48fd-9fb6-7dacd293bff3',
-        ); /* WAS: '' */
+      'pid' => 'new-8c211515-77bf-48fd-9fb6-7dacd293bff3',
+      'panel' => 'footer',
+      'type' => 'community_stats',
+      'subtype' => 'community_stats',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(),
+      'cache' => array(),
+      'style' => array(),
+      'css' => array(),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => '8c211515-77bf-48fd-9fb6-7dacd293bff3',
+    ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-9118fc7d-3da5-cf54-5152-5d66043812b2']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-9118fc7d-3da5-cf54-5152-5d66043812b2']->position = 1; /* WAS: 2 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d0980eb3-c220-4586-9857-21d16d552094'] = (object) array(
-          'pid' => 'new-d0980eb3-c220-4586-9857-21d16d552094',
-          'panel' => 'header',
-          'type' => 'content_add',
-          'subtype' => 'content_add',
-          'shown' => TRUE,
-          'access' => array(),
-          'configuration' => array(
-            'description' => 'Begivenheder kan for eksempel være planlagte aktiviteter eller møder.',
-            'override_title' => 1,
-            'override_title_text' => 'Opret begivenhed',
-            'types' => NULL,
-            'type' => 'event',
-          ),
-          'cache' => array(),
-          'style' => array(
-            'settings' => NULL,
-          ),
-          'css' => array(
-            'css_id' => 'add-event',
-            'css_class' => '',
-          ),
-          'extras' => array(),
-          'position' => 0,
-          'locks' => array(),
-          'uuid' => 'd0980eb3-c220-4586-9857-21d16d552094',
-        ); /* WAS: '' */
+      'pid' => 'new-d0980eb3-c220-4586-9857-21d16d552094',
+      'panel' => 'header',
+      'type' => 'content_add',
+      'subtype' => 'content_add',
+      'shown' => TRUE,
+      'access' => array(),
+      'configuration' => array(
+        'description' => 'Begivenheder kan for eksempel være planlagte aktiviteter eller møder.',
+        'override_title' => 1,
+        'override_title_text' => 'Opret begivenhed',
+        'types' => NULL,
+        'type' => 'event',
+      ),
+      'cache' => array(),
+      'style' => array(
+        'settings' => NULL,
+      ),
+      'css' => array(
+        'css_id' => 'add-event',
+        'css_class' => '',
+      ),
+      'extras' => array(),
+      'position' => 0,
+      'locks' => array(),
+      'uuid' => 'd0980eb3-c220-4586-9857-21d16d552094',
+    ); /* WAS: '' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d776b637-24a9-7e74-712c-8bc27d399c3e']->panel = 'right'; /* WAS: 'two_66_33_second' */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-d776b637-24a9-7e74-712c-8bc27d399c3e']->position = 0; /* WAS: 1 */
     $data['views_events_landing_page']->default_handlers['page_views_events_landing_page_panel_context']->conf['display']->content['new-e72884a7-369b-1954-2d1f-d69207c4d6ff']->panel = 'left'; /* WAS: 'two_66_33_first' */

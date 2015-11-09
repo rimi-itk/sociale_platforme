@@ -11,25 +11,25 @@ function sp_configuration_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
-  // Exported overrides for: page_manager_handlers
+  // Exported overrides for: page_manager_handlers.
   $overrides["page_manager_handlers.node_view_panel_context.conf|display|content|new-24b3c991-c23b-42de-b3bb-c83824a3fca7"] = (object) array(
-      'pid' => 'new-24b3c991-c23b-42de-b3bb-c83824a3fca7',
-      'panel' => 'right',
-      'type' => 'views_panes',
-      'subtype' => 'sp_who_s_online-panel_pane_1',
-      'shown' => TRUE,
-      'access' => array(),
-      'configuration' => array(),
-      'cache' => array(),
-      'style' => array(
-        'settings' => NULL,
-      ),
-      'css' => array(),
-      'extras' => array(),
-      'position' => 0,
-      'locks' => array(),
-      'uuid' => '24b3c991-c23b-42de-b3bb-c83824a3fca7',
-    );
+    'pid' => 'new-24b3c991-c23b-42de-b3bb-c83824a3fca7',
+    'panel' => 'right',
+    'type' => 'views_panes',
+    'subtype' => 'sp_who_s_online-panel_pane_1',
+    'shown' => TRUE,
+    'access' => array(),
+    'configuration' => array(),
+    'cache' => array(),
+    'style' => array(
+      'settings' => NULL,
+    ),
+    'css' => array(),
+    'extras' => array(),
+    'position' => 0,
+    'locks' => array(),
+    'uuid' => '24b3c991-c23b-42de-b3bb-c83824a3fca7',
+  );
   $overrides["page_manager_handlers.node_view_panel_context.conf|display|content|new-deed05d0-e6bb-9b94-9d09-499090d1e5d3|configuration|leave_node_title"] = 0;
   $overrides["page_manager_handlers.node_view_panel_context.conf|display|content|new-deed05d0-e6bb-9b94-9d09-499090d1e5d3|panel"] = 'left';
   $overrides["page_manager_handlers.node_view_panel_context.conf|display|layout"] = 'social_12_twocol_eightfour';
@@ -45,5 +45,5 @@ function sp_configuration_features_override_default_overrides() {
   );
   $overrides["page_manager_handlers.node_view_panel_context.conf|display|panels|two_66_33_first"]["DELETED"] = TRUE;
 
- return $overrides;
+  return $overrides;
 }

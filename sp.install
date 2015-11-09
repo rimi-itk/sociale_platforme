@@ -230,7 +230,7 @@ function sp_install() {
     );
     drupal_write_record('block', $footer_block);
   }
-  
+
   // Shortcuts
   // Add shortcuts to the default set on install.
   $t = get_t();
@@ -247,7 +247,7 @@ function sp_install() {
       'weight' => -20,
     ),
   );
-  shortcut_set_save($shortcut_set);  
+  shortcut_set_save($shortcut_set);
 
   // Features Handling.
   // Disable commons features.

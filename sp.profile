@@ -83,16 +83,18 @@ function sp_install_tasks_alter(&$tasks, $install_state) {
   foreach ($unset_tasks as $unset_task) {
     unset($tasks[$unset_task]);
   }
-  
+
   // Remove core steps for translation imports.
   unset($tasks['install_import_locales']);
   unset($tasks['install_import_locales_remaining']);
-  
+
   // Callback for language selection.
   $tasks['install_select_locale']['function'] = 'sp_locale_selection';
 }
 
-// Set default language to english.
+/**
+ * Set default language to english.
+ */
 function sp_locale_selection(&$install_state) {
   $install_state['parameters']['locale'] = 'en';
 }
