@@ -136,6 +136,22 @@ function sociale_platforme_process_node(&$variables, $hook) {
   if ($variables['teaser'] && $variables['promote']) {
     $variables['submitted'] .= ' <span class="featured-node-tooltip">' . t('Featured') . ' ' . $variables['type'] . '</span>';
   }
+  
+  // Provide theme suggestions for view mode node templates
+  $view_mode = $variables['view_mode'];
+  $content_type = $variables['type'];
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
+  $variables['theme_hook_suggestions'][] = 'node__' . $view_mode . '_' . $content_type;
+
+  $view_mode_preprocess = 'THEME_preprocess_node_' . $view_mode . '_' . $content_type;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables, $hook);
+  }
+
+  $view_mode_preprocess = 'THEME_preprocess_node_' . $view_mode;
+  if (function_exists($view_mode_preprocess)) {
+    $view_mode_preprocess($variables, $hook);
+  }
 }
 
 /**
