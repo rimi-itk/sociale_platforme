@@ -134,8 +134,8 @@ function social_blocks_frontpage_banner_view() {
 
   $output = "";
   $output .= "<div class='subtitle'>" . variable_get('frontpage_banner_subtitle', '- Bliv en del af et online fællesskab') . "</div>";
-  $output .= "<div class='banner-link'>" . l('Læs mere', 'user/register', array('attributes' => array('class' => 'btn'))) . "</div>";
-  $output .= "<div class='banner-register'>Opret " . l('gratis profil ', 'user/register') . " med det samme</div>";
+  $output .= "<div class='banner-link'>" . l(t('Read more'), 'user/register', array('attributes' => array('class' => 'btn'))) . "</div>";
+  $output .= "<div class='banner-register'>Opret " . l(t('free profile '), 'user/register') . " med det samme</div>";
   $output .= render($image);
 
   return $output;
@@ -154,7 +154,7 @@ function social_blocks_community_stats_view() {
   $output .= "<div><span class='icon-gruppe'></span> " . social_blocks_get_community_stats("groups") . " grupper</div>";
   $output .= "<div><span class='icon-indlaeg'></span> " . social_blocks_get_community_stats("posts") . " indlæg</div>";
   $output .= "</div>";
-  $output .= "<div class='stats-link'>" . l('Opret profil', 'user/register', array('attributes' => array('class' => 'btn'))) . "</div>";
+  $output .= "<div class='stats-link'>" . l(t('Create account'), 'user/register', array('attributes' => array('class' => 'btn'))) . "</div>";
   $output .= "<div class='stats-btm'>Det er <strong>gratis</strong> at oprette dig</div>";
 
   return $output;

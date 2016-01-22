@@ -69,7 +69,7 @@ function social_og_config_content_add_render($subtype, $conf, $context = NULL) {
   $options = array();
   $options['attributes']['class'][] = 'btn-link';
 
-  $output .= '<div class="btn-wrapper">' . l(t("Create " . $conf["type"]), 'node/add/' . $conf["type"], $options) . "</div>";
+  $output .= '<div class="btn-wrapper">' . l(t("Create @type", array("@type" => $conf["type"])), "node/add/" . $conf["type"], $options) . "</div>";
 
   $block->content = $output;
   return $block;

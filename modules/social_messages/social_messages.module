@@ -29,6 +29,8 @@ function social_messages_menu() {
 }
 
 /**
+ * User privatemsg list.
+ *
  * Loads user object, build formular and returns it.
  * privatemsg_list is reused from Private Msg module.
  */
