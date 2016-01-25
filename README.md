@@ -11,26 +11,30 @@ Dette er en installationsprofil til [Drupal](https://www.drupal.org/), som er be
 ## Installationsvejledning
 
 1. Klon dette repository.
-```
-$ git clone git@github.com:createinside/sociale_platforme.git`
-```
+
+    ```
+    $ git clone git@github.com:createinside/sociale_platforme.git
+    ```
+
 2. Flyt ``sp.make``-filen til den mappe, hvor websitet skal installeres. Kør derefter følgende kommando fra denne mappe.
-```
-$ drush make sp.make
-```
-*Herefter downloades både Drupal, Commons, Sociale Platforme og alle dependencies automatisk.* OBS: Dette kan tage nogle minutter.
+
+    ```
+    $ drush make sp.make
+    ```
+
+    *Herefter downloades både Drupal, Commons, Sociale Platforme og alle dependencies automatisk.* OBS: Dette kan tage nogle minutter.
 
 3. Tilgå websitets URL og udfyld den trinvise installationsformular. Sørg for at vælge "Sociale Platforme" på første trin.
 
-  Læs mere om generel installation af Drupal her: https://www.drupal.org/documentation/install/run-script#7
+    Læs mere om generel installation af Drupal her: https://www.drupal.org/documentation/install/run-script#7
 
 4. Når installationen er gennemført, bør følgende handlinger udføres:
 
-  * Upgrade users
+    * Upgrade users
 
-  * Rebuild permissions.      
+    * Rebuild permissions.      
 
-  Begge handlinger kan udføres af admin i backenden (admin/reports/status).  
+    Begge handlinger kan udføres af admin i backenden (admin/reports/status).  
 
 ## Konfiguration
 
