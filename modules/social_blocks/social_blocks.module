@@ -87,7 +87,7 @@ function social_blocks_block_save($delta = '', $edit = array()) {
       variable_set('frontpage_banner_subtitle', $edit['subtitle']);
 
       // Saving the file.
-      if (isset($edit['file']['uri'])) {
+      if (isset($edit['file'])) {
         $file = file_load($edit['file']);
         $file->status = FILE_STATUS_PERMANENT;
         file_save($file);
