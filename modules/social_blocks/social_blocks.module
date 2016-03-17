@@ -36,6 +36,9 @@ function social_blocks_block_view($delta = '') {
       $block['content'] = social_blocks_community_stats_view();
       break;
   }
+
+
+
   return $block;
 }
 
@@ -51,8 +54,28 @@ function social_blocks_block_configure($delta = '') {
       $form['subtitle'] = array(
         '#type' => 'textfield',
         '#title' => t('Subtitle'),
-        '#default_value' => variable_get('frontpage_banner_subtitle', '- Bliv en del af et online fællesskab'),
+        '#default_value' => variable_get('frontpage_banner_subtitle', '- Hat og briller '),
       );
+
+      $form['subtitle2'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Button text'),
+        '#default_value' => variable_get('frontpage_banner_button_text', '- Bannerlink '),
+      );
+
+      $form['subtitle3'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Button link'),
+        '#default_value' => variable_get('frontpage_banner_button_link', '- Hat og briller '),
+      );
+
+      $form['subtitle4'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Register'),
+        '#default_value' => variable_get('frontpage_banner_register', '- Hat og briller '),
+      );
+
+
       $form['file'] = array(
         '#name' => 'banner_image',
         '#type' => 'managed_file',
@@ -85,6 +108,9 @@ function social_blocks_block_save($delta = '', $edit = array()) {
   switch ($delta) {
     case 'frontpage_banner':
       variable_set('frontpage_banner_subtitle', $edit['subtitle']);
+      variable_set('frontpage_banner_button_text', $edit['subtitle2']);
+      variable_set('frontpage_banner_button_link', $edit['subtitle3']);
+      variable_set('frontpage_banner_register', $edit['subtitle4']);
 
       // Saving the file.
       if (isset($edit['file'])) {
@@ -134,8 +160,8 @@ function social_blocks_frontpage_banner_view() {
 
   $output = "";
   $output .= "<div class='subtitle'>" . variable_get('frontpage_banner_subtitle', '- Bliv en del af et online fællesskab') . "</div>";
-  $output .= "<div class='banner-link'>" . l(t('Read more'), 'user/register', array('attributes' => array('class' => 'btn'))) . "</div>";
-  $output .= "<div class='banner-register'>Opret " . l(t('free profile '), 'user/register') . " med det samme</div>";
+  $output .= "<div class='banner-link'>" . l( variable_get('frontpage_banner_button_text', 'readmore'), variable_get('frontpage_banner_button_link', '/uset/register'), array('attributes' => array('class' => 'btn'))) . "</div>";
+  $output .= "<div class='banner-register'>" . variable_get('frontpage_banner_register', 'register') . "</div>";
   $output .= render($image);
 
   return $output;
