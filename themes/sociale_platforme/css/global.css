@@ -1475,6 +1475,7 @@ form.commons-events-form-float .commons-event-status {
 /* line 28, ../scss/partials/_blocks.scss */
 .panel-pane .pane-content a {
   text-decoration: none;
+  color: #8cb385;
 }
 
 /* Panels - Grid specific styling */
