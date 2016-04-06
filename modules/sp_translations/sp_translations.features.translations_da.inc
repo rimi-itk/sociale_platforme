@@ -55,6 +55,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Maximum number of attendees', array(), array('context' => ''));
+  $translations['da:default']['04457c3ede3c91616b071b602865fb41'] = array(
+    'source' => 'Manage the group roles.',
+    'context' => '',
+    'location' => '/groups/krimi-og-sp%C3%A6nding',
+    'translation' => 'Administrér grupperoller.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Manage the group roles.', array(), array('context' => ''));
   $translations['da:default']['04cc33a179a66c6b06b408295154220c'] = array(
     'source' => 'No unread messages',
     'context' => '',
@@ -127,6 +136,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('You have no pending invitations.', array(), array('context' => ''));
+  $translations['da:default']['1797d3266655609608e9e22e60163d56'] = array(
+    'source' => 'Switch to plain text editor',
+    'context' => '',
+    'location' => '/admin/structure/block/manage/block/1/configure?destination=home',
+    'translation' => 'Skift til enkel editor',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Switch to plain text editor', array(), array('context' => ''));
   $translations['da:default']['197dab699d1048b68829141fb91a69b1'] = array(
     'source' => 'Group manager: !manager',
     'context' => '',
@@ -217,6 +235,24 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Followers', array(), array('context' => ''));
+  $translations['da:default']['277651963931f6a38e1d8029f8f55ca6'] = array(
+    'source' => 'about an hour',
+    'context' => '',
+    'location' => 'profiles/commons/modules/contrib/timeago/timeago.js',
+    'translation' => 'ca. en time',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('about an hour', array(), array('context' => ''));
+  $translations['da:default']['27f8e12082d8b481c071975d29a82d0e'] = array(
+    'source' => 'Thanks for your group submission! This group has entered the moderation queue and will be reviewed shortly.',
+    'context' => '',
+    'location' => '/node/add/group',
+    'translation' => 'Du har oprettet en gruppe. Gruppen afventer godkendelse af moderator.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Thanks for your group submission! This group has entered the moderation queue and will be reviewed shortly.', array(), array('context' => ''));
   $translations['da:default']['2840bf7f37458ceefe94a4e48ecfd6ad'] = array(
     'source' => 'Create event',
     'context' => '',
@@ -226,6 +262,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Create event', array(), array('context' => ''));
+  $translations['da:default']['2e6fb6ecf41494ded0800140e038e980'] = array(
+    'source' => 'Manage the group members.',
+    'context' => '',
+    'location' => '/groups/krimi-og-sp%C3%A6nding',
+    'translation' => 'Administrér gruppemedlemmer.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Manage the group members.', array(), array('context' => ''));
   $translations['da:default']['2fc1a8701c44bf595a55ed72b3c18dc3'] = array(
     'source' => 'Edit account',
     'context' => '',
@@ -298,6 +343,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('No Invitations', array(), array('context' => ''));
+  $translations['da:default']['42369faa6a6b243aac58683f3874bf99'] = array(
+    'source' => 'Create account',
+    'context' => '',
+    'location' => '/',
+    'translation' => 'Opret profil',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Create account', array(), array('context' => ''));
   $translations['da:default']['42e7094ca072ee2be952cffb61dca09e'] = array(
     'source' => 'If checked, you\'ll automatically sign up for email notifications when you follow something. Leave unchecked to default to signing up only for activity stream notifications',
     'context' => '',
@@ -532,6 +586,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('%d minutes', array(), array('context' => ''));
+  $translations['da:default']['7c0b2f4c51511ab0c62f9cdd885c5368'] = array(
+    'source' => 'Switch to rich text editor',
+    'context' => '',
+    'location' => '/admin/structure/block/manage/block/1/configure?destination=home',
+    'translation' => 'Skift til rich text editor',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Switch to rich text editor', array(), array('context' => ''));
   $translations['da:default']['7d3ca287745d36f20a6dbad4787f1e78'] = array(
     'source' => '<strong>[comment_count]</strong> comments',
     'context' => '',
@@ -541,6 +604,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('<strong>[comment_count]</strong> comments', array(), array('context' => ''));
+  $translations['da:default']['7f6136f68e30ce603d6ddb28d17481bb'] = array(
+    'source' => 'You\'re not following anything of this type.',
+    'context' => '',
+    'location' => '/install.php?profile=sp&locale=en&id=2&op=finished',
+    'translation' => 'Du følger ikke noget af denne type.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('You\'re not following anything of this type.', array(), array('context' => ''));
   $translations['da:default']['815cdbccc938f7a83bd6aa0ab886d594'] = array(
     'source' => '@flag you follow <span class="user-follow-count">@count</span>',
     'context' => '',
@@ -550,6 +622,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('@flag you follow <span class="user-follow-count">@count</span>', array(), array('context' => ''));
+  $translations['da:default']['849490640e65410418220e5c179a1477'] = array(
+    'source' => 'a day',
+    'context' => '',
+    'location' => 'profiles/commons/modules/contrib/timeago/timeago.js',
+    'translation' => 'en dag',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('a day', array(), array('context' => ''));
   $translations['da:default']['8606e9fa1b12bfd163d02379e2a9be3d'] = array(
     'source' => 'Total members: @count',
     'context' => '',
@@ -848,6 +929,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('User profile information', array(), array('context' => ''));
+  $translations['da:default']['d046534843565ff75cacf20edad943ad'] = array(
+    'source' => 'free profile ',
+    'context' => '',
+    'location' => '/',
+    'translation' => 'gratis profil',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('free profile ', array(), array('context' => ''));
   $translations['da:default']['d3eec9ad1270849bf34556afaa3037e6'] = array(
     'source' => 'Content you\'re not following',
     'context' => '',
@@ -866,6 +956,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('Control how you are notified of new content and activity. When you follow a group, topic, user, or other content, you\'ll see updates in your content and activity streams, and you will automatically get email updates unlesss you disable emails or unfollow.', array(), array('context' => ''));
+  $translations['da:default']['d7312cbb00ad732e4371218bb5b76a0b'] = array(
+    'source' => 'Voting results',
+    'context' => '',
+    'location' => '/install.php?profile=sp&locale=en',
+    'translation' => 'Afstemningsresultat',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Voting results', array(), array('context' => ''));
   $translations['da:default']['d7b35af41274101c9b3e736fd71e451b'] = array(
     'source' => 'Moderated group',
     'context' => '',
@@ -924,7 +1023,7 @@ function sp_translations_translations_da_defaults() {
     'source' => 'about %d hours',
     'context' => '',
     'location' => 'profiles/commons/modules/contrib/timeago/timeago.js',
-    'translation' => 'omkring %d timer',
+    'translation' => 'ca. %d timer',
     'plid' => 0,
     'plural' => 0,
   );
@@ -938,6 +1037,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('You follow', array(), array('context' => ''));
+  $translations['da:default']['e43fb49ca3b5001dc6b66d66b991c282'] = array(
+    'source' => 'Add group members.',
+    'context' => '',
+    'location' => '/groups/krimi-og-sp%C3%A6nding',
+    'translation' => 'Tilføj gruppemedlemmer.',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Add group members.', array(), array('context' => ''));
   $translations['da:default']['e4718dc7d6a38f2276a03b109a8d8ac1'] = array(
     'source' => 'Content options are divided by category. Please select a category from the left to proceed.',
     'context' => '',
@@ -1037,6 +1145,15 @@ function sp_translations_translations_da_defaults() {
     'plural' => 0,
   );
   $translatables[] = t('No polls have been added to this group.', array(), array('context' => ''));
+  $translations['da:default']['fcfa0aa012cb4a345881353a24ee9244'] = array(
+    'source' => 'Manage the group permissions.',
+    'context' => '',
+    'location' => '/groups/krimi-og-sp%C3%A6nding',
+    'translation' => 'Administrér rettigheder',
+    'plid' => 0,
+    'plural' => 0,
+  );
+  $translatables[] = t('Manage the group permissions.', array(), array('context' => ''));
   $translations['da:default']['fd33af72833904c37843389ec1b083e9'] = array(
     'source' => 'This group has',
     'context' => '',
