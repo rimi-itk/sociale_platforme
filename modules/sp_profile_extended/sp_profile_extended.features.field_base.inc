@@ -10,7 +10,7 @@
 function sp_profile_extended_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_display_name'.
+  // Exported field_base: 'field_display_name'
   $field_bases['field_display_name'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -19,6 +19,14 @@ function sp_profile_extended_field_default_field_bases() {
     'field_name' => 'field_display_name',
     'field_permissions' => array(
       'type' => 0,
+    ),
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
     ),
     'indexes' => array(
       'format' => array(
@@ -34,13 +42,21 @@ function sp_profile_extended_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_profile_kom'.
+  // Exported field_base: 'field_profile_kom'
   $field_bases['field_profile_kom'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_profile_kom',
+    'foreign keys' => array(
+      'tid' => array(
+        'columns' => array(
+          'tid' => 'tid',
+        ),
+        'table' => 'taxonomy_term_data',
+      ),
+    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -60,13 +76,14 @@ function sp_profile_extended_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_profile_toc'.
+  // Exported field_base: 'field_profile_toc'
   $field_bases['field_profile_toc'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_profile_toc',
+    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',

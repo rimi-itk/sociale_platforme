@@ -10,7 +10,7 @@
 function sp_profile_extended_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'user-user-field_display_name'.
+  // Exported field_instance: 'user-user-field_display_name'
   $field_instances['user-user-field_display_name'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -41,11 +41,11 @@ function sp_profile_extended_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'user-user-field_profile_kom'.
+  // Exported field_instance: 'user-user-field_profile_kom'
   $field_instances['user-user-field_profile_kom'] = array(
     'bundle' => 'user',
     'default_value' => NULL,
@@ -73,11 +73,11 @@ function sp_profile_extended_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
-  // Exported field_instance: 'user-user-field_profile_toc'.
+  // Exported field_instance: 'user-user-field_profile_toc'
   $field_instances['user-user-field_profile_toc'] = array(
     'bundle' => 'user',
     'default_value' => array(
@@ -111,7 +111,7 @@ function sp_profile_extended_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
