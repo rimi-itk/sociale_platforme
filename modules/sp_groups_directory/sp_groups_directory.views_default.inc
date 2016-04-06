@@ -62,6 +62,7 @@ function sp_groups_directory_views_default_views() {
   $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
   $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
   $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'commons_follow_group';
   /* Relationship: Content: Tags (field_group_tags) */
   $handler->display->display_options['relationships']['field_group_tags_tid']['id'] = 'field_group_tags_tid';
