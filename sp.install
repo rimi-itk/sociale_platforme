@@ -262,6 +262,10 @@ function sp_install() {
 
   // Enable sp features.
   $modules_en = array(
+    'sp_events',
+    'sp_pages',
+    'sp_posts',
+    'sp_polls',
     'sp_events_pages',
     'sp_groups',
     'sp_group_homepages',
