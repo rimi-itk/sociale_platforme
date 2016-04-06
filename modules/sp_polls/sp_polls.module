@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP - Polls feature.
+ */
+
+include_once 'sp_polls.features.inc';

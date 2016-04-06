@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the SP - Events feature.
+ */
+
+include_once 'sp_events.features.inc';
