@@ -37,6 +37,7 @@ function social_og_config_content_add_edit($form, &$form_state) {
       $options[$type->type] = check_plain($type->name);
     }
   }
+  
   $form['type'] = array(
     '#title' => t('Choose a content type'),
     '#type' => 'radios',
@@ -61,7 +62,15 @@ function social_og_config_content_add_edit_submit($form, &$form_state) {
 function social_og_config_content_add_render($subtype, $conf, $context = NULL) {
 
   $block = new stdClass();
-  $block->title = t("Create @type", array("@type" => $conf["type"]));
+
+  if($conf['override_title']) {
+    $title = $conf['override_title_text'];
+  }
+  else {
+    $title = t("Create @type", array("@type" => $conf["type"]));
+  }
+
+  $block->title = $title;
 
   $output = '';
   $output .= '<div class="desc">' . $conf['description'] . '</div>';
@@ -69,8 +78,8 @@ function social_og_config_content_add_render($subtype, $conf, $context = NULL) {
   $options = array();
   $options['attributes']['class'][] = 'btn-link';
 
-  $output .= '<div class="btn-wrapper">' . l(t("Create @type", array("@type" => $conf["type"])), "node/add/" . $conf["type"], $options) . "</div>";
-
+  $output .= '<div class="btn-wrapper">' . l($title, "node/add/" . $conf["type"], $options) . "</div>";
+  
   $block->content = $output;
   return $block;
 }
