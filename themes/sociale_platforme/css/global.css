@@ -1475,6 +1475,7 @@ form.commons-events-form-float .commons-event-status {
 /* line 28, ../scss/partials/_blocks.scss */
 .panel-pane .pane-content a {
   text-decoration: none;
+  color: #8cb385;
 }
 
 /* Panels - Grid specific styling */
@@ -2944,6 +2945,9 @@ form.commons-events-form-float .commons-event-status {
 }
 /* line 95, ../scss/partials/_views.scss */
 .view-sp-groups.groups-grid .views-row .views-field-field-group-tags {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   padding-left: 50px;
   margin-bottom: 10px;
   color: #888888;
