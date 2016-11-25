@@ -800,11 +800,6 @@ body.logged-in .branding-data {
 	Main Menu
 ========================================================================== 
 */
-/* line 30, ../scss/partials/_navigation.scss */
-.block-main-menu {
-  display: none;
-}
-
 /* line 36, ../scss/partials/_navigation.scss */
 #zone-menu ul.menu li,
 #zone-menu ul.main-menu li {
