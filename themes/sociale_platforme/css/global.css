@@ -800,17 +800,12 @@ body.logged-in .branding-data {
 	Main Menu
 ========================================================================== 
 */
-/* line 30, ../scss/partials/_navigation.scss */
-.block-main-menu {
-  display: none;
-}
-
-/* line 36, ../scss/partials/_navigation.scss */
+/* line 33, ../scss/partials/_navigation.scss */
 #zone-menu ul.menu li,
 #zone-menu ul.main-menu li {
   margin: 0;
 }
-/* line 38, ../scss/partials/_navigation.scss */
+/* line 35, ../scss/partials/_navigation.scss */
 #zone-menu ul.menu li a,
 #zone-menu ul.main-menu li a {
   margin: 0;
@@ -827,12 +822,12 @@ body.logged-in .branding-data {
 	Secondary menu
 ========================================================================== 
 */
-/* line 57, ../scss/partials/_navigation.scss */
+/* line 54, ../scss/partials/_navigation.scss */
 #zone-footer ul.menu {
   margin: 0;
   padding: 0;
 }
-/* line 60, ../scss/partials/_navigation.scss */
+/* line 57, ../scss/partials/_navigation.scss */
 #zone-footer ul.menu li {
   list-style: none;
   display: inline-block;
@@ -840,13 +835,13 @@ body.logged-in .branding-data {
   padding: 0 15px 0 0;
   border-right: 1px solid #5f5f5f;
 }
-/* line 66, ../scss/partials/_navigation.scss */
+/* line 63, ../scss/partials/_navigation.scss */
 #zone-footer ul.menu li a {
   margin: 0;
   padding: 0;
   text-decoration: none;
 }
-/* line 72, ../scss/partials/_navigation.scss */
+/* line 69, ../scss/partials/_navigation.scss */
 #zone-footer ul.menu li.last {
   border: none;
   margin: 0;
@@ -858,22 +853,22 @@ body.logged-in .branding-data {
 	Breadcrumb
 ========================================================================== 
 */
-/* line 85, ../scss/partials/_navigation.scss */
+/* line 82, ../scss/partials/_navigation.scss */
 #breadcrumb {
   margin-bottom: 23px;
   line-height: 1.25em;
 }
-/* line 88, ../scss/partials/_navigation.scss */
+/* line 85, ../scss/partials/_navigation.scss */
 #breadcrumb .breadcrumb {
   margin-bottom: 0;
 }
-/* line 91, ../scss/partials/_navigation.scss */
+/* line 88, ../scss/partials/_navigation.scss */
 #breadcrumb a {
   color: #372f2b;
   text-decoration: none;
   line-height: 1em;
 }
-/* line 96, ../scss/partials/_navigation.scss */
+/* line 93, ../scss/partials/_navigation.scss */
 #breadcrumb span {
   position: relative;
   top: 1px;
@@ -884,15 +879,15 @@ body.logged-in .branding-data {
 	Tabs
 ========================================================================== 
 */
-/* line 109, ../scss/partials/_navigation.scss */
+/* line 106, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs {
   margin: 0;
 }
-/* line 111, ../scss/partials/_navigation.scss */
+/* line 108, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li {
   margin: 0 10px 10px 0;
 }
-/* line 113, ../scss/partials/_navigation.scss */
+/* line 110, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li a {
   color: white;
   font-size: 13px;
@@ -912,7 +907,7 @@ body.logged-in .branding-data {
   -webkit-box-shadow: 0 2px 0 0 #6c6c6b;
   box-shadow: 0 2px 0 0 #6c6c6b;
 }
-/* line 122, ../scss/partials/_navigation.scss */
+/* line 119, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li a span {
   color: white;
   font-size: 1em;
@@ -920,26 +915,26 @@ body.logged-in .branding-data {
   padding: 0 0 0 8px;
   border-left: 1px solid #808080;
 }
-/* line 130, ../scss/partials/_navigation.scss */
+/* line 127, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li a:before {
   display: none !important;
 }
-/* line 135, ../scss/partials/_navigation.scss */
+/* line 132, ../scss/partials/_navigation.scss */
 .quicktabs-style-commons-pills ul.quicktabs-tabs li.active a:after {
   display: none;
 }
 
-/* line 142, ../scss/partials/_navigation.scss */
+/* line 139, ../scss/partials/_navigation.scss */
 ul.tabs {
   margin: 0 0 30px 0;
 }
-/* line 144, ../scss/partials/_navigation.scss */
+/* line 141, ../scss/partials/_navigation.scss */
 ul.tabs li {
   display: inline-block;
   padding: 0;
   margin: 0 10px 10px 0;
 }
-/* line 148, ../scss/partials/_navigation.scss */
+/* line 145, ../scss/partials/_navigation.scss */
 ul.tabs li a {
   color: white;
   font-size: 13px;
